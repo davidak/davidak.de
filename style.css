@@ -1,0 +1,64 @@
+body {
+	background: url(http://subtlepatterns.com/patterns/diagmonds.png);
+	background-color: #555;
+	color: #222;
+}
+
+header .container {
+	padding: 0;
+}
+
+.container#content {
+	background-color: #eee;
+	padding-top: 15px;
+}
+
+.nav a{
+	color: #222;
+  text-shadow: 3px 3px 8px #222;
+}
+
+.nav a:hover {
+	text-decoration: none;
+}
+
+.nav {
+	margin: 10px 0;
+	background-image: url(images/navbg.jpg);
+}
+
+.navbar{
+	margin: 20px 0;
+	font-size: 40px;
+}
+
+.brand {
+  float: none;
+  }
+
+.navbar-center
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    margin: auto;
+  height:100%;
+}
+
+.navbar-est
+{
+    position: absolute;
+    width: 100%;
+    left: 70px;
+    top: 63px;
+    text-align: center;
+    margin: auto;
+  height:100%;
+  font-size: 11px;
+}
+
+hr {
+	color: #333;
+}
