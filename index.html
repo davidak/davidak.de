@@ -13,7 +13,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="css/fotorama.css" rel="stylesheet">
     <link href="style.css" type="text/css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -60,8 +60,12 @@
 
   <div class="col-md-6">
 
-      <img src="images/2.jpg" alt="Foto von davidak">
-
+<div class="fotorama" data-fit="cover" data-transition="crossfade" data-loop="true" data-autoplay="true" data-keyboard="true">
+  <img src="images/1.jpg" alt="Foto von davidak">
+  <img src="images/2.jpg" alt="Foto von davidak">
+  <img src="images/3.jpg" alt="Foto von davidak">
+  <img src="images/4.jpg" alt="Foto von davidak">
+</div>
 
 <br>
 <dl class="dl-horizontal">
@@ -113,7 +117,7 @@
 
 <div class="col-md-4">
     <div class="thumbnail">
-      <a href="http://satzgenerator.de/"><img src="satzgenerator.jpg" alt="Satzgenerator"></a>
+      <a href="http://satzgenerator.de/"><img src="Satzgenerator.jpg" alt="Satzgenerator"></a>
       <div class="caption">
         <h3>Satzgenerator</h3>
         <p>Webanwendung in Python, JavaScript, HTML und CSS. Verwendet JQuery, Bootstrap und die von mir entwickelte Python-Bibliothek <a href="#">PyZufall</a>.</p>
@@ -177,5 +181,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/fotorama.js"></script>
 </body>
 </html>
