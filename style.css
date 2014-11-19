@@ -15,10 +15,7 @@ header .container {
 
 .nav a{
 	color: #222;
-}
-
-.nav a:hover {
-	text-decoration: none;
+  text-shadow: 1px 1px 8px rgba(34, 34, 34, 0.4);
 }
 
 .nav {
@@ -47,8 +44,10 @@ header .container {
 }
 
 .nav>li>a:hover, .nav>li>a:focus {
+  color: #222;
   text-decoration: none;
   background-color: transparent;
+  text-shadow: 2px 2px 8px rgba(34, 34, 34, 0.6);
 }
 
 .navbar-est
@@ -65,4 +64,14 @@ header .container {
 
 hr {
 	color: #333;
+}
+
+a {
+  color: #B00000;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #D00000;
+  text-decoration: underline;
 }
