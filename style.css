@@ -65,13 +65,3 @@ header .container {
 hr {
 	color: #333;
 }
-
-a {
-  color: #B00000;
-  text-decoration: none;
-}
-
-a:hover, a:focus {
-  color: #D00000;
-  text-decoration: underline;
-}
