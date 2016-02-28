@@ -7,5 +7,6 @@
 .. description: 
 .. type: text
 .. pretty_url: False
+.. nocomments: True
 
 Schreibe hier deinen Seiteninhalt hin.

@@ -6,6 +6,7 @@
 .. link: 
 .. description: Eine Liste aller Seiten
 .. type: text
+.. nocomments: True
 
 .. post-list::
 	:post_type: page

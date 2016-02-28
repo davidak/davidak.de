@@ -6,5 +6,6 @@
 .. link: 
 .. description: 
 .. type: text
+.. nocomments: True
 
 Schreibe hier deinen Seiteninhalt hin.
