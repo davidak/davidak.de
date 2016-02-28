@@ -21,10 +21,11 @@ BLOG_AUTHOR = "davidak"  # (translatable)
 BLOG_TITLE = "davidak"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
-SITE_URL = "https://davidak.de/"
+#SITE_URL = "https://davidak.de/"
+SITE_URL = "http://127.0.0.1:8000/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
-# BASE_URL = "https://davidak.de/"
+#BASE_URL = "https://davidak.de/"
 BLOG_EMAIL = "post@davidak.de"
 BLOG_DESCRIPTION = "Die Private Webseite von davidak."  # (translatable)
 
@@ -129,10 +130,12 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/archiv/", "Archiv"),
+        ("/blog/", "Blog"),
         ("/thema/", "Themen"),
-        ("/seiten/", "Alle Seiten"),
+        ("/archiv/", "Archiv"),
         ("/rss.xml", "RSS-Feed"),
+        ("/seiten/", "Alle Seiten"),
+        ("/impressum/", "Impressum"),
     ),
 }
 
@@ -199,6 +202,7 @@ TIMEZONE = "Europe/Berlin"
 # Date format used to display post dates. (translatable)
 # (str used by datetime.datetime.strftime)
 # DATE_FORMAT = '%Y-%m-%d %H:%M'
+DATE_FORMAT = '%d.%m.%Y'
 
 # Date format used to display post dates, if local dates are used. (translatable)
 # (str used by moment.js)
@@ -211,7 +215,7 @@ TIMEZONE = "Europe/Berlin"
 # 2 = using a string like “2 days ago”
 #
 # Your theme must support it, bootstrap and bootstrap3 already do.
-# DATE_FANCINESS = 0
+DATE_FANCINESS = 0
 
 # While Nikola can select a sensible locale for each language,
 # sometimes explicit control can come handy.
@@ -276,7 +280,7 @@ ONE_FILE_POSTS = True
 # Nikola supports logo display.  If you have one, you can put the URL here.
 # Final output is <img src="LOGO_URL" id="logo" alt="BLOG_TITLE">.
 # The URL may be relative to the site root.
-LOGO_URL = 'images/logo.png'
+LOGO_URL = '/images/logo.png'
 
 # If you want to hide the title of your website (for example, if your logo
 # already contains the text), set this to False.
@@ -873,7 +877,7 @@ SITEMAP_INCLUDE_FILELESS_DIRS = False
 # from indexing and other robotic spidering. * is supported. Will only be effective
 # if SITE_URL points to server root. The list is used to exclude resources from
 # /robots.txt and /sitemap.xml, and to inform search engines about /sitemapindex.xml.
-# ROBOTS_EXCLUSIONS = ["/archive.html", "/category/*.html"]
+ROBOTS_EXCLUSIONS = ["/impressum", "/test/*", "/tmp/*"]
 
 # Instead of putting files in <slug>.html, put them in <slug>/index.html.
 # No web server configuration is required. Also enables STRIP_INDEXES.
