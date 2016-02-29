@@ -1170,3 +1170,56 @@ GLOBAL_CONTEXT = {}
 # GLOBAL_CONTEXT as parameter when the template is about to be
 # rendered
 GLOBAL_CONTEXT_FILLER = []
+
+# localsearch Tipue plugin
+SEARCH_FORM = """
+<span class="navbar-form navbar-left">
+<input type="text" id="tipue_search_input" class="form-control" placeholder="Search">
+</span>"""
+
+BODY_END = """
+<!-- Modal -->
+<div id="search-results" class="modal fade" role="dialog" style="height: 80%;">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Search Results:</h4>
+      </div>
+      <div class="modal-body" id="tipue_search_content" style="max-height: 600px; overflow-y: auto;">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script>
+$(document).ready(function() {
+    $.when(
+        $.getScript( "/assets/js/tipuesearch_set.js" ),
+        $.getScript( "/assets/js/tipuesearch.js" ),
+        $.Deferred(function( deferred ){
+            $( deferred.resolve );
+        })
+    ).done(function() {
+        $('#tipue_search_input').tipuesearch({
+            'mode': 'json',
+            'contentLocation': '/assets/js/tipuesearch_content.json'
+        });
+        $('#tipue_search_input').keyup(function (e) {
+            if (e.keyCode == 13) {
+                $('#search-results').modal()
+            }
+        });
+    });
+});
+</script>
+"""
+
+EXTRA_HEAD_DATA = """
+<link rel="stylesheet" type="text/css" href="/assets/css/tipuesearch.css">
+"""
