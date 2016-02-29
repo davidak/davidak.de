@@ -1,9 +1,6 @@
 .. title: Rückblick Webseite
 .. slug: rueckblick-webseite
 .. date: 2016-02-28 17:40:06 UTC+01:00
-.. tags: 
-.. category: 
-.. link: 
 .. description: Versionen der Webseite
 .. type: text
 
