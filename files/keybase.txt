@@ -1,0 +1,81 @@
+==================================================================
+https://keybase.io/davidak
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://davidak.de
+  * I am davidak (https://keybase.io/davidak) on keybase.
+  * I have a public key with fingerprint 8CF1 774E 62AA 8FFF 3A61  C57D B683 9887 B601 97B0
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.7.7"
+        },
+        "key": {
+            "fingerprint": "8cf1774e62aa8fff3a61c57db6839887b60197b0",
+            "host": "keybase.io",
+            "key_id": "B6839887B60197B0",
+            "uid": "f273abb185e0efba3aefe15bd1973d19",
+            "username": "davidak"
+        },
+        "merkle_root": {
+            "ctime": 1427926186,
+            "hash": "fb0bd6d55fc2964d95e1a863cb692edb5bef6d7d40aab8b5992cead4a921e5140715ff9dfa5305385c660a93af3ca569d284c6b3cc93a50441a8750fba061ebc",
+            "seqno": 187834
+        },
+        "service": {
+            "hostname": "davidak.de",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1427926665,
+    "expire_in": 157680000,
+    "prev": "4edfeb6d680dc168de6cc761b75b4adc6b47d322e665a2ae45c8fcc7755ae4ae",
+    "seqno": 2,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owFVkntQFVUcxy+o+AC6YDOgaYRbGRRd93X2gRITIajkNOa9OAwOd87uOXtZL+xe
+di9Xedx8UCiKQuOohJhGpmY4Oio2DmU+msxHiaVQjaaYjjIyRENijE62y9iU54+d
+c377Od/f93vOaYwd5RgXcaSmafWRiC0HIs71Sg7PVK2uipB0VEGkVxFyiYq1oD3T
+YCkm0gk/rpCgiV2qnqzpCLuWmMmPmTQihA1T1TWLIl28iyfCaTZub1ZUzYeNgKHa
+WoQgKxTPs5ijIRQURWEgR8mARxInMKIg8BJHUiIvkZZksW4Gn+hKjGh6VWRVsx7z
+WSN8ls2Xj/xQaJ6BkkQJAJNYkSADsYIpICELY6yPDZrYeBwJwZCKoN+2W4oNfwn2
+Gro+klkOqjZBsTQv0hwlcJYhaBbbHSRSQhwCQJFpkWORCDAFBY6RJU6kMZKAhBUO
+8YglIZQECYgiLWOIWCjSFAYUS/IUUBQRKRAwJGAEIHMcCUUGKowMASciWmBlTmJk
+2aoBkmUtdR6QVhaSo7AkWwlMXKbpljmBFxg2bK+NkCpj27d9ak+GcyFsbQkYelCX
+9RKrXhwMBsx0O3OwImCDS7HkNfFnIxpeSdWQdWX/v1PKQp88D44DaQReFlAN7FVt
+AvCcQFrDboRDliaLkYIlDlllJFOcgDAnyzxHSTyQWIisgCyPGJrGlhSkIWaBLCgW
+wQNgLSD+LyVt+YQ+S9JUfRoMlhuYCNdFTh3tiBjniBoTaT9ax4Txcf++5P4K56Pi
+1u6m3MIP5jnj8/oi+06f1ZjSH3b2NLOPZn6ytdPxy5XU6oeH6h/A5NRJC0e9G9N7
+M1Spdk57LulrcPjnouHYVYU/lu1ZEP1mEYC7hkrqmhYX1x1zzsmYldBZ/9Yff57M
+8JJ3+etTpiWeWnk/5mqeeePaF/Fd7b+fTM09v+f5rAstW0q3i57K013dt5tyQu6I
+95eszp48Znrzrt2F+wpi5xfNDWwdoAuO+lHLvOiqfbnDs5NVxbPfeze6oded8fTL
+Y7dsT2dXvXDdPUQU/XRp+8olF7Rjmblv79v/+nuXJi68pX907vLpePnDOzMau47f
+H66iB4Fn+audstm6F36+6eO43TvGv9GX/ndNVHjAKMzey5zUjr/oTDx145VZGzyH
+V0zJX7p54+SZOd/mTXO2D7Tc6Bt0pQjns080lI1ZczQxIWFO5fxfXZ51Lr7roBjV
+4TR7H7jb+wv8d84uaPu0cr/vbm1KR8LNpXOejX7wzjPxa2uHl9HtG2+t39FfnVKe
+8OWVmtjNg033MhoOFeV7hhqT9vSYG77Keel69817STWTmmfUPlLOJEddnZv/2jpY
+vd7wxdSGbqeMPrdr+qzmwaeS3L91ZH+fs+2h0ze7fo07ccLFi+G/JsYuXzEcjttJ
+VW5q7bkwu8Z07WirXzQ2s837XVlc+eUT177pYf0z/QfODy/OzSxYtO2U5jizmjg4
+w/EP
+=fXyz
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/davidak
+
+==================================================================
