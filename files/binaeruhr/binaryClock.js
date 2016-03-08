@@ -13,7 +13,7 @@
 //
 
 // This is the path to the various images which represent the hours or minutes
-var imagePath="http://davidak.de/binaeruhr" ;
+var imagePath="" ;
 
 // This is the default prefix for the image names used for hour digits 
 // e.g. h10 represents the least significant hour digit cleared
@@ -142,7 +142,8 @@ function buildImageTag(anImageNameString) {
 	var result = "" ;
 	
 	for(var i = 0; i < arrayOfImages.length; i++) {
-		result += '<img src="' + imagePath + '/' + arrayOfImages[i] + '.png">' ; 
+		//result += '<img src="' + imagePath + '/' + arrayOfImages[i] + '.png">' ;
+		result += '<img src="' + arrayOfImages[i] + '.png">' ;
 	}
 
 	return result ;
