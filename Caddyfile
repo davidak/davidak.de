@@ -1,0 +1,27 @@
+#davidak.de
+davidak.de.binary.lan.davidak.de
+
+root /var/www/davidak/web/output
+
+gzip
+#git git@github.com:davidak/davidak.de.git /var/www/davidak/web {
+#	then nikola build
+#}
+
+log ../log/access.log {
+	rotate {
+		age 96
+		keep 10
+	}
+}
+
+errors {
+	log ../log/error.log {
+		age 96
+		keep 10
+	}
+}
+
+# Redirect old URLs
+redir /blog/wp-content/uploads/2010/12/Bildschirmfoto-2010-12-14-um-19.47.29-1024x640.png /images/celtx_auf_osx_wortspiele_polysemia.thumbnail.png
+redir /blog/wp-content/uploads/2010/12/Bildschirmfoto-2010-12-14-um-19.47.29.png /images/celtx_auf_osx_wortspiele_polysemia.png
