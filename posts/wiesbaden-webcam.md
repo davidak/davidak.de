@@ -7,7 +7,9 @@
 .. type: text
 -->
 
-Ich hab ne Seite gefunden, auf der man einen Blick über Wiesbaden werfen kann.
+Ich hab eine Seite gefunden, auf der man einen Blick über Wiesbaden werfen kann.
 <!-- TEASER_END -->
 
-Hier ist der Link: [http://www.dopey.de/wicams.html](http://www.dopey.de/wicams.html)
+~~Hier ist der Link: [http://www.dopey.de/wicams.html](http://www.dopey.de/wicams.html)~~
+
+**Update 03.07.16**: Die Webcam der Firma [WiTCOM](https://www.witcom.de/) mit Blick auf den Wiesbadener Hauptbahnhof ist jetzt unter [https://www.witcom.de/witcam/](https://www.witcom.de/witcam/) erreichbar.
