@@ -3,95 +3,18 @@
 from __future__ import unicode_literals
 import time
 
-# !! This is the configuration of Nikola. !! #
-# !!  You should edit it to your liking.  !! #
-
-
-# ! Some settings can be different in different languages.
-# ! A comment stating (translatable) is used to denote those.
-# ! There are two ways to specify a translatable setting:
-# ! (a) BLOG_TITLE = "My Blog"
-# ! (b) BLOG_TITLE = {"en": "My Blog", "es": "Mi Blog"}
-# ! Option (a) is used when you don't want that setting translated.
-# ! Option (b) is used for settings that are different in different languages.
-
-
-# Data about this site
 BLOG_AUTHOR = "davidak"  # (translatable)
-BLOG_TITLE = "davidak"  # (translatable)
-# This is the main URL for your site. It will be used
-# in a prominent link. Don't forget the protocol (http/https)!
+BLOG_TITLE = "davidak.de"  # (translatable)
 #SITE_URL = "https://davidak.de/"
-SITE_URL = "http://127.0.0.1:8000/"
+#SITE_URL = "http://127.0.0.1:8000/"
+SITE_URL = "http://beta.davidak.de/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 #BASE_URL = "https://davidak.de/"
 BLOG_EMAIL = "post@davidak.de"
-BLOG_DESCRIPTION = "Die Private Webseite von davidak."  # (translatable)
+BLOG_DESCRIPTION = "Die private Webseite von davidak."  # (translatable)
 
-# Nikola is multilingual!
-#
-# Currently supported languages are:
-#
-# en        English
-# ar        Arabic
-# az        Azerbaijani
-# bg        Bulgarian
-# bs        Bosnian
-# ca        Catalan
-# cs        Czech [ALTERNATIVELY cz]
-# da        Danish
-# de        German
-# el        Greek [NOT gr]
-# eo        Esperanto
-# es        Spanish
-# et        Estonian
-# eu        Basque
-# fa        Persian
-# fi        Finnish
-# fr        French
-# gl        Galician
-# hi        Hindi
-# hr        Croatian
-# hu        Hungarian
-# id        Indonesian
-# it        Italian
-# ja        Japanese [NOT jp]
-# ko        Korean
-# nb        Norwegian Bokmål
-# nl        Dutch
-# pa        Punjabi
-# pl        Polish
-# pt        Portuguese
-# pt_br     Portuguese (Brazil)
-# ru        Russian
-# sk        Slovak
-# sl        Slovene
-# sr        Serbian (Cyrillic)
-# sr_latin  Serbian (Latin)
-# sv        Swedish
-# tr        Turkish [NOT tr_TR]
-# uk        Ukrainian
-# ur        Urdu
-# zh_cn     Chinese (Simplified)
-#
-# If you want to use Nikola with a non-supported language you have to provide
-# a module containing the necessary translations
-# (cf. the modules at nikola/data/themes/base/messages/).
-# If a specific post is not translated to a language, then the version
-# in the default language will be shown instead.
-
-# What is the default language?
 DEFAULT_LANG = "de"
-
-# What other languages do you have?
-# The format is {"translationcode" : "path/to/translation" }
-# the path will be used as a prefix for the generated pages location
-TRANSLATIONS = {
-    DEFAULT_LANG: "",
-    # Example for another language:
-    # "es": "./es",
-}
 
 # What will translated input files be named like?
 
@@ -130,7 +53,8 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/blog/", "Blog"),
+        ("/", "<b>"+BLOG_TITLE+"</b>"),
+        ("/blog/", "Weblog"),
         ("/thema/", "Themen"),
         ("/archiv/", "Archiv"),
         ("/rss.xml", "RSS-Feed"),
@@ -141,6 +65,32 @@ NAVIGATION_LINKS = {
 
 # Name of the theme to use.
 THEME = "bootstrap3-jinja"
+#THEME = "bootblog-jinja"
+#THEME = "lanyon"
+
+#GLOBAL_CONTEXT = {
+#    "lanyon_subtheme": "theme-base-08"
+#}
+
+
+#GLOBAL_CONTEXT = {'blog_sidebar': """\
+#<div class="sidebar-module sidebar-module-inset">
+#  <h4>About</h4>
+#  <p>This is the Bootstrap Blog theme by @mdo, adapted for Nikola by @Kwpolska.
+#  And this sidebar is completely customizable — you can put anything you want
+#  here!</p>
+#</div>
+#<div class="sidebar-module">
+#  <h4>Links</h4>
+#  <ol class="list-unstyled">
+#    <li><a href="http://getbootstrap.com/examples/blog/">Bootstrap Blog Theme</a></li>
+#    <li><a href="https://getnikola.com/">Nikola</a></li>
+#    <li><a href="https://twitter.com/mdo">@mdo</a></li>
+#    <li><a href="https://twitter.com/Kwpolska">@Kwpolska</a></li>
+#    <li><a href="https://twitter.com/GetNikola">@GetNikola</a></li>
+#  </ol>
+#</div>
+#"""}
 
 # Primary color of your theme. This will be used to customize your theme and
 # auto-generate related colors in POSTS_SECTION_COLORS. Must be a HEX value.
@@ -173,11 +123,13 @@ THEME_COLOR = '#5670d4'
 
 POSTS = (
     ("posts/*.rst", "blog", "post.tmpl"),
+    ("posts/*.md", "blog", "post.tmpl"),
     ("posts/*.txt", "blog", "post.tmpl"),
     ("posts/*.html", "blog", "post.tmpl"),
 )
 PAGES = (
     ("pages/*.rst", "", "story.tmpl"),
+    ("pages/*.md", "", "story.tmpl"),
     ("pages/*.txt", "", "story.tmpl"),
     ("pages/*.html", "", "story.tmpl"),
 )
@@ -202,7 +154,7 @@ TIMEZONE = "Europe/Berlin"
 # Date format used to display post dates. (translatable)
 # (str used by datetime.datetime.strftime)
 # DATE_FORMAT = '%Y-%m-%d %H:%M'
-DATE_FORMAT = '%d.%m.%Y'
+DATE_FORMAT = '%e. %B %Y'
 
 # Date format used to display post dates, if local dates are used. (translatable)
 # (str used by moment.js)
@@ -284,7 +236,7 @@ ONE_FILE_POSTS = True
 
 # If you want to hide the title of your website (for example, if your logo
 # already contains the text), set this to False.
-SHOW_BLOG_TITLE = True
+SHOW_BLOG_TITLE = False
 
 # Writes tag cloud data in form of tag_cloud_data.json.
 # Warning: this option will change its default value to False in v8!
@@ -394,7 +346,7 @@ TAGLIST_MINIMUM_POSTS = 1
 # output / TRANSLATION[lang] / CATEGORY_PATH / CATEGORY_PREFIX category.html (list of posts for a category)
 # output / TRANSLATION[lang] / CATEGORY_PATH / CATEGORY_PREFIX category.xml (RSS feed for a category)
 # (translatable)
-CATEGORY_PATH = "thema"
+CATEGORY_PATH = "categories"
 CATEGORY_PREFIX = ""
 
 # If CATEGORY_ALLOW_HIERARCHIES is set to True, categories can be organized in
@@ -475,9 +427,9 @@ FRONT_INDEX_HEADER = {
 }
 
 # Create per-month archives instead of per-year
-# CREATE_MONTHLY_ARCHIVE = False
+#CREATE_MONTHLY_ARCHIVE = True
 # Create one large archive instead of per-year
-# CREATE_SINGLE_ARCHIVE = False
+CREATE_SINGLE_ARCHIVE = True
 # Create year, month, and day archives each with a (long) list of posts
 # (overrides both CREATE_MONTHLY_ARCHIVE and CREATE_SINGLE_ARCHIVE)
 # CREATE_FULL_ARCHIVES = False
@@ -540,11 +492,14 @@ REDIRECTIONS = []
 # to `nikola deploy`.  If no arguments are specified, a preset
 # named `default` will be executed.  You can use as many presets
 # in a `nikola deploy` command as you like.
-# DEPLOY_COMMANDS = {
-#     'default': [
-#         "rsync -rav --delete output/ joe@my.site:/srv/www/site",
-#     ]
-# }
+DEPLOY_COMMANDS = {
+    'default': [
+        "rsync -rav --delete output/ joe@my.site:/srv/www/site",
+    ],
+    'staging': [
+        "rsync -rah --progress --delete output/ schokokeks.org:websites/beta",
+    ]
+}
 
 # github_deploy configuration
 # For more details, read the manual:
@@ -790,7 +745,9 @@ FEED_LINKS_APPEND_QUERY = False
 
 # A HTML fragment describing the license, for the sidebar.
 # (translatable)
-LICENSE = "CC-BY-SA"
+LICENSE = """
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" title="Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International-Lizenz">CC-BY-SA 4.0 International</a>.
+"""
 # I recommend using the Creative Commons' wizard:
 # https://creativecommons.org/choose/
 # LICENSE = """
@@ -801,7 +758,7 @@ LICENSE = "CC-BY-SA"
 
 # A small copyright notice for the page footer (in HTML).
 # (translatable)
-CONTENT_FOOTER = 'Contents &copy; {date}         {author} - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         {license}'
+CONTENT_FOOTER = '&copy; 2005 - {date} {author} - Powered by <a href="https://getnikola.com">Nikola</a> {license}'
 
 # Things that will be passed to CONTENT_FOOTER.format().  This is done
 # for translatability, as dicts are not formattable.  Nikola will
@@ -829,7 +786,8 @@ CONTENT_FOOTER_FORMATS = {
 # systems.  The following comment systems are supported by Nikola:
 #   disqus, facebook, googleplus, intensedebate, isso, livefyre, muut
 # You can leave this option blank to disable comments.
-COMMENT_SYSTEM = "isso"
+#COMMENT_SYSTEM = "isso"
+COMMENT_SYSTEM = ""
 # And you also need to add your COMMENT_SYSTEM_ID which
 # depends on what comment system you use. The default is
 # "nikolademo" which is a test account for Disqus. More information
@@ -847,7 +805,7 @@ COMMENT_SYSTEM_ID = ""
 # WARNING: if a page would conflict with the index file (usually
 #          caused by setting slug to `index`), the STORY_INDEX
 #          will not be generated for that directory.
-# STORY_INDEX = False
+# STORY_INDEX = True
 # Enable comments on story pages?
 COMMENTS_IN_STORIES = True
 # Enable comments on picture gallery pages?
@@ -877,7 +835,7 @@ SITEMAP_INCLUDE_FILELESS_DIRS = False
 # from indexing and other robotic spidering. * is supported. Will only be effective
 # if SITE_URL points to server root. The list is used to exclude resources from
 # /robots.txt and /sitemap.xml, and to inform search engines about /sitemapindex.xml.
-ROBOTS_EXCLUSIONS = ["/impressum", "/test/*", "/tmp/*"]
+ROBOTS_EXCLUSIONS = ["/impressum", "/test/*", "/tmp/*", "*"]
 
 # Instead of putting files in <slug>.html, put them in <slug>/index.html.
 # No web server configuration is required. Also enables STRIP_INDEXES.
@@ -1164,7 +1122,7 @@ USE_BUNDLES = True
 
 # Put in global_context things you want available on all your templates.
 # It can be anything, data, functions, modules, etc.
-GLOBAL_CONTEXT = {}
+#GLOBAL_CONTEXT = {}
 
 # Add functions here and they will be called with template
 # GLOBAL_CONTEXT as parameter when the template is about to be
@@ -1173,9 +1131,11 @@ GLOBAL_CONTEXT_FILLER = []
 
 # localsearch Tipue plugin
 SEARCH_FORM = """
-<span class="navbar-form navbar-left">
-<input type="text" id="tipue_search_input" class="form-control" placeholder="Search">
+<span class="navbar-form navbar-right">
+<input type="text" id="tipue_search_input" class="form-control" placeholder="Suchen">
 </span>"""
+
+#style="height: 24px;">
 
 BODY_END = """
 <!-- Modal -->
@@ -1186,12 +1146,12 @@ BODY_END = """
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Search Results:</h4>
+        <h4 class="modal-title">Suchergebnisse:</h4>
       </div>
       <div class="modal-body" id="tipue_search_content" style="max-height: 600px; overflow-y: auto;">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">schließen</button>
       </div>
     </div>
 

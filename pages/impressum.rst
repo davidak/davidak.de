@@ -15,6 +15,10 @@ Inhaltlich Verantwortlicher gemäß § 55 Abs. 2 RStV:
 Sämtliche Beiträge auf **davidak.de** dienen sowohl der Unterhaltung als auch der Information.
 Die Kommentare zu meinen Beiträgen sollen zur Diskussion anregen und stellen ausdrücklich nur die subjektive Meinung des jeweiligen Verfassers dar. Ich behalte mir das Recht vor, Kommentare kommentarlos zu löschen.
 
+.. raw:: html
+
+    Wenn nicht anders angegeben stehen die Texte von <a xmlns:cc="http://creativecommons.org/ns#" href="https://davidak.de/" property="cc:attributionName" rel="cc:attributionURL">davidak</a> auf <b><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">davidak.de</span></b> unter einer <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.
+
 Datenschutz
 -----------
 
