@@ -30,7 +30,7 @@ Screenshot
 
 .. thumbnail:: /images/perl_personendatengenerator_mac.png
 
-    Mit dem Personendatengenerator auf einem Macintosh 10.000 Datensätze erzeugt, die jetzt im Internet abrufbar sind. 
+    Mit dem Personendatengenerator auf einem Macintosh 10.000 Datensätze erzeugt, die jetzt im Internet abrufbar sind.
 
 Download
 --------
@@ -323,11 +323,11 @@ Source Code
     # Datensätze senden (Wordpress)
     if (($modus == 1) || ($modus == 2)) {
         $time_send_wp = gettimeofday() if $d;
-        
+
         foreach $j (1..$anzahl) {
 
             @wp_category = split (',', $wp_cat[$j]);
-            
+
             my $o = WordPress::XMLRPC->new;
             $o->username($blog_user);
             $o->password($blog_pass);
@@ -343,12 +343,12 @@ Source Code
                 'mt_allow_comments' => 1,
             };
 
-            my $ID = post_to_wp( $o, $blogpost ); 
+            my $ID = post_to_wp( $o, $blogpost );
 
             sub post_to_wp {
                 my ( $o, $blogpost ) = @_;
                 my $ID;
-                
+
                 for ( 0..1000 ) {
                     try { $ID = $o->newPost($blogpost,1); };
                     last if $ID; # no need to retry if it worked
@@ -388,6 +388,6 @@ Links
 - `Vornamen der Jahrzehnte 1990 - 2009 <http://www.beliebte-vornamen.de/>`_
 - `Bundesnetzagentur Vorwahl, Ort, CSV <http://www.bundesnetzagentur.de/cln_1932/DE/Sachgebiete/Telekommunikation/RegulierungTelekommunikation/Nummernverwaltung/OrtsnetzVerzeichnisseNeu/Vorwahlverzeichnis/Vorwahlverzeichnis_Basepage.html?nn=154346>`_
 - `Postleitzahl Ort CSV <http://www.manfrin-it.com/postleitzahlen/plz.html>`_
-- `E-Mail Domains 1<http://www.zemskov.net/free-email-domains.html>`_
-- `E-Mail Domains 2<http://freecentral2.tripod.com/freemail.htm>`_
-- `E-Mail Domains 3<http://www.joewein.de/sw/spam-freemailer.htm`_
+- `E-Mail Domains 1 <http://www.zemskov.net/free-email-domains.html>`_
+- `E-Mail Domains 2 <http://freecentral2.tripod.com/freemail.htm>`_
+- `E-Mail Domains 3 <http://www.joewein.de/sw/spam-freemailer.htm`_
