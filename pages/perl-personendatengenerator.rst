@@ -390,4 +390,4 @@ Links
 - `Postleitzahl Ort CSV <http://www.manfrin-it.com/postleitzahlen/plz.html>`_
 - `E-Mail Domains 1 <http://www.zemskov.net/free-email-domains.html>`_
 - `E-Mail Domains 2 <http://freecentral2.tripod.com/freemail.htm>`_
-- `E-Mail Domains 3 <http://www.joewein.de/sw/spam-freemailer.htm`_
+- `E-Mail Domains 3 <http://www.joewein.de/sw/spam-freemailer.htm>`_
