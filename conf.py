@@ -7,7 +7,7 @@ BLOG_AUTHOR = "davidak"  # (translatable)
 BLOG_TITLE = "davidak.de"  # (translatable)
 #SITE_URL = "https://davidak.de/"
 #SITE_URL = "http://127.0.0.1:8000/"
-SITE_URL = "http://beta.davidak.de/"
+SITE_URL = "http://davidak.binary.lan.davidak.de/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 #BASE_URL = "https://davidak.de/"
@@ -497,8 +497,11 @@ DEPLOY_COMMANDS = {
         "rsync -rav --delete output/ joe@my.site:/srv/www/site",
     ],
     'staging': [
+        "rsync -rah --progress --delete output/ davidak@binary.lan:/var/www/davidak/web/",
+    ],
+    'beta': [
         "rsync -rah --progress --delete output/ schokokeks.org:websites/beta",
-    ]
+    ],
 }
 
 # github_deploy configuration
