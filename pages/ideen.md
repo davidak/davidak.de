@@ -7,6 +7,27 @@
 
 Ich hab viele (gute) Ideen, aber zu wenig Zeit alles umzusetzen. Vielleicht hast du Zeit und Lust dazu?
 
+# Distributed zero-effort system monitoring
+
+- systemd knows state of services, can restart failed services
+- [collectd](https://collectd.org/) gathers statistics about the system and provides simple threshold checking
+- there is also [StatsD](https://github.com/etsy/statsd) for that
+- [Grafana](http://grafana.org/) draws beautiful graphs
+- my idea is to combine that into a distributed network where the nodes organize the monitoring of each other dynamically
+- one node checks another node, if the check fails, another nodes approves the state
+- the community of "the indie web" can help monitoring each other nodes, data should remain private (zero-knowledge)
+- failed services, high resource usage or offline nodes should trigger notifications to their admin (so foreign nodes needs to know the state of my nodes to mail me)
+- it should be possible to look at performance stats and service states over time of offline nodes (redundant data on network)
+- maybe store data on [IPFS](https://ipfs.io/)?
+
+some links i found:
+
+- <http://blog.joncairns.com/2014/09/monit-style-alerts-for-systemd/>
+- <https://asylum.madhouse-project.org/blog/2015/09/09/systemd-job-monitoring/>
+- <https://github.com/kylemanna/systemd-utils>
+- <http://delaat.net/rp/2014-2015/p33/report.pdf>
+- <http://0pointer.de/blog/projects/watchdog.html>
+
 # Entropie für Bitcoin verkaufen
 
 # Software für NixOS paketieren
