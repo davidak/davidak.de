@@ -1,53 +1,54 @@
 #davidak.de
-davidak.de.binary.lan.davidak.de
+davidak.binary.lan.davidak.de {
+	root /var/www/davidak/web/
+	gzip
 
-root /var/www/davidak/web/
+	log /var/www/davidak/log/access.log {
+		rotate {
+			age 96
+			keep 10
+		}
+	}
 
-gzip
+	errors {
+		log ../log/error.log {
+			age 96
+			keep 10
+		}
+	}
 
-log ../log/access.log {
-	rotate {
-		age 96
-		keep 10
+	# Redirect old URLs
+	redir {
+		/blog/wp-content/uploads/2010/12/Bildschirmfoto-2010-12-14-um-19.47.29-1024x640.png /images/celtx_auf_osx_wortspiele_polysemia.thumbnail.png
+		/blog/wp-content/uploads/2010/12/Bildschirmfoto-2010-12-14-um-19.47.29.png /images/celtx_auf_osx_wortspiele_polysemia.png
+		/fotos https://www.flickr.com/photos/davidak
+		/blog/feed /rss.xml
+		/wiki/python/satzgenerator https://github.com/davidak/satzgenerator
+		/wiki/sonstiges/towerdefense-flash /towerdefense-flashgames/
+		/wiki/html/javaprojects /javaprojects-html-template/
+		/wiki/batch/shutdown-virus /shutdown-virus/
+		/wiki/batch/fork /batch-forkbomb/
+		/wiki/batch/counter /batch-counter/
+		/wiki/batch/crrafooyouh /crrafooyouh/
+		/wiki/java/sprechstunde /java-sprechstunde/
+		/wiki/java/photoshop-game /photoshop-text-game/
+		/wiki/java/anno-1203-game /anno-1203-textbasiertes-aufbau-simulations-spiel/
+		/wiki/perl/zerorandom /perl-zerorandom/
+		/wiki/perl/namengenerator /perl-namengenerator/
+		/wiki/perl/satzgenerator https://github.com/davidak/satzgenerator
+		/wiki/perl/personendatengenerator /perl-personendatengenerator/
+		/wiki/java/rtfm /java-rtfm-random-text-file-maker/
+		/wiki/perl/counter /perl-counter/
+		/wiki/bitcoin /bitcoin/
+		/wiki/python/unterschiedliche-zufallswerte /python-unterschiedliche-zufallswerte/
+		/wiki/perl/rss-feed /perl-rss-feed/
+		/wiki/python/vcard-generator https://github.com/davidak/random-vcard-generator
+		/wiki/anleitung/debian7-debootstrap /debian7-debootstrap/
+		/wiki/anleitung/windows-xp-automatisch-anmelden /windows-xp-automatisch-anmelden/
+		/wiki/anleitung/sophos-antivirus-client-enterprise-console /sophos-antivirus-client-enterprise-console/
+		/wiki/dokument/cpu-referat-praesentation-ausarbeitung-download /cpu-referat-praesentation-ausarbeitung-download/
+		/wiki/dokument/real-kassenzettel-reverse-engeneering /real-kassenzettel-reverse-engeneering/
+		/wiki/dokument/real-pfandgutschein-reverse-engeneering /real-pfandgutschein-reverse-engeneering/
+		/wiki/anleitung/wartezimmer /blog/wartezimmer/
 	}
 }
-
-errors {
-	log ../log/error.log {
-		age 96
-		keep 10
-	}
-}
-
-# Redirect old URLs
-redir /blog/wp-content/uploads/2010/12/Bildschirmfoto-2010-12-14-um-19.47.29-1024x640.png /images/celtx_auf_osx_wortspiele_polysemia.thumbnail.png
-redir /blog/wp-content/uploads/2010/12/Bildschirmfoto-2010-12-14-um-19.47.29.png /images/celtx_auf_osx_wortspiele_polysemia.png
-redir /fotos https://www.flickr.com/photos/davidak
-redir /blog/feed /rss.xml
-redir /wiki/python/satzgenerator https://github.com/davidak/satzgenerator
-redir /wiki/sonstiges/towerdefense-flash /towerdefense-flashgames/
-redir /wiki/html/javaprojects /javaprojects-html-template/
-redir /wiki/batch/shutdown-virus /shutdown-virus/
-redir /wiki/batch/fork /batch-forkbomb/
-redir /wiki/batch/counter /batch-counter/
-redir /wiki/batch/crrafooyouh /crrafooyouh/
-redir /wiki/java/sprechstunde /java-sprechstunde/
-redir /wiki/java/photoshop-game /photoshop-text-game/
-redir /wiki/java/anno-1203-game /anno-1203-textbasiertes-aufbau-simulations-spiel/
-redir /wiki/perl/zerorandom /perl-zerorandom/
-redir /wiki/perl/namengenerator /perl-namengenerator/
-redir /wiki/perl/satzgenerator https://github.com/davidak/satzgenerator
-redir /wiki/perl/personendatengenerator /perl-personendatengenerator/
-redir /wiki/java/rtfm /java-rtfm-random-text-file-maker/
-redir /wiki/perl/counter /perl-counter/
-redir /wiki/bitcoin /bitcoin/
-redir /wiki/python/unterschiedliche-zufallswerte /python-unterschiedliche-zufallswerte/
-redir /wiki/perl/rss-feed /perl-rss-feed/
-redir /wiki/python/vcard-generator https://github.com/davidak/random-vcard-generator
-redir /wiki/anleitung/debian7-debootstrap /debian7-debootstrap/
-redir /wiki/anleitung/windows-xp-automatisch-anmelden /windows-xp-automatisch-anmelden/
-redir /wiki/anleitung/sophos-antivirus-client-enterprise-console /sophos-antivirus-client-enterprise-console/
-redir /wiki/dokument/cpu-referat-praesentation-ausarbeitung-download /cpu-referat-praesentation-ausarbeitung-download/
-redir /wiki/dokument/real-kassenzettel-reverse-engeneering /real-kassenzettel-reverse-engeneering/
-redir /wiki/dokument/real-pfandgutschein-reverse-engeneering /real-pfandgutschein-reverse-engeneering/
-redir /wiki/anleitung/wartezimmer /blog/wartezimmer/
