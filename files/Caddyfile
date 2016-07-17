@@ -1,5 +1,5 @@
 #davidak.de
-davidak.binary.lan.davidak.de {
+davidak.binary.lan.davidak.de:80 {
   root /var/www/davidak/web/
   gzip
 
@@ -11,7 +11,7 @@ davidak.binary.lan.davidak.de {
   }
 
   errors {
-    log ../log/error.log {
+    log /var/www/davidak/log/error.log {
       age 96
       keep 10
     }
