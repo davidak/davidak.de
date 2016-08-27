@@ -1,7 +1,14 @@
-#davidak.de
+#davidak.de {
 davidak.binary.lan.davidak.de:80 {
   root /var/www/davidak/web/
   gzip
+
+  # Isso Comments
+  proxy /isso 127.0.0.1:9001 {
+    without /isso
+    transparent
+    header_upstream X-Script-Name /isso
+  }
 
   log /var/www/davidak/log/access.log {
     rotate {
