@@ -36,8 +36,9 @@ Es gibt im Internet diverse Wortlisten, wobei die Angabe der Häufigkeit für un
 
 - <http://wortschatz.uni-leipzig.de/html/wliste.html>
 - <http://corpora2.informatik.uni-leipzig.de/download.html>
+- <http://www1.ids-mannheim.de/kl/projekte/methoden/derewo.html>
 - <http://clarin.bbaw.de:8088/fedora/objects/dwds:2/datastreams>
-- <https://invokeit.wordpress.com/frequency-word-lists/>
+- <https://github.com/hermitdave/FrequencyWords>
 - <https://de.wikipedia.org/wiki/Liste_der_h%C3%A4ufigsten_W%C3%B6rter_der_deutschen_Sprache>
 - <https://de.wiktionary.org/wiki/Wiktionary:Fehlende_Eintr%C3%A4ge/WP_Top1000>
 - <https://dumps.wikimedia.org/backup-index.html>
