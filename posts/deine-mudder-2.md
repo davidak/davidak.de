@@ -3,7 +3,7 @@
 .. slug: 444-deine-mudder-2
 .. date: 2008-07-03 11:00:00
 .. tags: Fun,Internet
-.. description: 
+.. description:
 .. type: text
 -->
 
@@ -29,7 +29,7 @@ Jetzt habe ich 2 neue mit noch besseren Sprüchen gefunden.
 
 >Deine Mudder klaut bei KiK.
 
->Deine Mutter singt beim scheien Drop it like it´s hot.
+>Deine Mutter singt beim scheißen Drop it like it´s hot.
 
 >Deine Mudder bellt wenns klingelt!
 
