@@ -5,7 +5,7 @@
 .. description:
 .. type: text
 
-Ich hab viele (gute) Ideen, aber zu wenig Zeit alles umzusetzen. Vielleicht hast du Zeit und Lust dazu?
+Ich hab viele (gute) Ideen, aber zu wenig Zeit alle zeitnah umzusetzen. Vielleicht inspiriert dich etwas davon!
 
 # Distributed zero-effort system monitoring
 
@@ -43,7 +43,16 @@ Use the [Provisioning API](https://doc.owncloud.org/server/8.2/admin_manual/conf
 
 Mehrere USB-LEDs an ein USB-Hub und per Python-Script deaktivieren/aktivieren.
 
-<http://stackoverflow.com/questions/4702216/controlling-a-usb-power-supply-on-off-with-linux>
+Technisch nicht möglich mit den meisten Hubs:
+
+>The circuitry in the USB hardware commonly used in desktop and laptop computers is not capable of turning off power to USB ports.
+>The same is true of many hubs.  There are some hubs which _can_ turn off power to ports, but relatively few brands support this.  I don't know which ones do.
+
+**Alan Stern** on linux-usb Mailinglist [[1](https://marc.info/?l=linux-usb&m=133519454726017&w=2)]
+
+Es kann mit [hubpower](https://github.com/heiher/hubpower) getestet werden.
+
+[YKUSH](https://www.yepkit.com/products/ykush) ist ein 3-Port Hub, bei dem die Ports einzeln abschaltbar sind. Wie schnell habe ich per E-Mail angefragt. (06.10.16)
 
 # Shared Hosting-Provider Simulator als Browsergame
 
@@ -92,4 +101,4 @@ Hahaha
 
 ---
 
-Die Idee, so eine Seite zu veröffentlichen, hab ich von [lastlog.de](https://lastlog.de/wiki/index.php/IdeenEcke).
+Die Idee, eine Seite mit Ideen zu veröffentlichen, hab ich von [lastlog.de](https://lastlog.de/wiki/index.php/IdeenEcke).
