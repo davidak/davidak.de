@@ -1,5 +1,8 @@
-#davidak.de {
-davidak.binary.lan.davidak.de:80 {
+www.davidak.de {
+  redir https://davidak.de{uri}
+}
+
+davidak.de {
   root /var/www/davidak/web/
   gzip
 
@@ -23,6 +26,9 @@ davidak.binary.lan.davidak.de:80 {
       keep 10
     }
   }
+
+  # Rewrite RSS-Feed
+  rewrite /blog/feed/ /rss.xml
 
   # Redirect old URLs
   redir {
