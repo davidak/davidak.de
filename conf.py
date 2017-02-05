@@ -789,7 +789,8 @@ CONTENT_FOOTER_FORMATS = {
 # systems.  The following comment systems are supported by Nikola:
 #   disqus, facebook, googleplus, intensedebate, isso, livefyre, muut
 # You can leave this option blank to disable comments.
-COMMENT_SYSTEM = "isso"
+#COMMENT_SYSTEM = "isso"
+COMMENT_SYSTEM = ""
 # And you also need to add your COMMENT_SYSTEM_ID which
 # depends on what comment system you use. The default is
 # "nikolademo" which is a test account for Disqus. More information
@@ -837,7 +838,7 @@ SITEMAP_INCLUDE_FILELESS_DIRS = False
 # from indexing and other robotic spidering. * is supported. Will only be effective
 # if SITE_URL points to server root. The list is used to exclude resources from
 # /robots.txt and /sitemap.xml, and to inform search engines about /sitemapindex.xml.
-ROBOTS_EXCLUSIONS = ["/impressum", "/test/*", "/tmp/*", "*"]
+ROBOTS_EXCLUSIONS = ["/impressum", "/test/*", "/tmp/*"]
 
 # Instead of putting files in <slug>.html, put them in <slug>/index.html.
 # No web server configuration is required. Also enables STRIP_INDEXES.
@@ -855,7 +856,7 @@ FUTURE_IS_NOW = False
 # Generally, you want FUTURE_IS_NOW and DEPLOY_FUTURE to be the same value.
 # DEPLOY_FUTURE = False
 # If False, draft posts will not be deployed
-DEPLOY_DRAFTS = True
+DEPLOY_DRAFTS = False
 
 # Allows scheduling of posts using the rule specified here (new_post -s)
 # Specify an iCal Recurrence Rule: http://www.kanzaki.com/docs/ical/rrule.html
