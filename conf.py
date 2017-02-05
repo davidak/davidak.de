@@ -5,9 +5,9 @@ import time
 
 BLOG_AUTHOR = "davidak"  # (translatable)
 BLOG_TITLE = "davidak.de"  # (translatable)
-#SITE_URL = "https://davidak.de/"
+SITE_URL = "https://davidak.de/"
 #SITE_URL = "http://127.0.0.1:8000/"
-SITE_URL = "http://davidak.binary.lan.davidak.de/"
+#SITE_URL = "http://davidak.binary.lan.davidak.de/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 #BASE_URL = "https://davidak.de/"
@@ -494,7 +494,7 @@ REDIRECTIONS = []
 # in a `nikola deploy` command as you like.
 DEPLOY_COMMANDS = {
     'default': [
-        "rsync -rav --delete output/ joe@my.site:/srv/www/site",
+        "rsync -rah --progress --delete output/ davidak@atomic.davidak.de:/var/www/davidak/web/",
     ],
     'staging': [
         "rsync -rah --progress --delete output/ davidak@binary.lan:/var/www/davidak/web/",
@@ -744,7 +744,7 @@ FEED_READ_MORE_LINK = '<p><a href="{link}">{read_more}…</a> ({min_remaining_re
 # {feedFormat}                  The name of the syndication format.
 # Example using replacement for use with Google Analytics:
 # "utm_source={feedRelUri}&utm_medium=nikola_feed&utm_campaign={feedFormat}_feed"
-FEED_LINKS_APPEND_QUERY = False
+FEED_LINKS_APPEND_QUERY = "pk_campaign=feed"
 
 # A HTML fragment describing the license, for the sidebar.
 # (translatable)
@@ -1180,6 +1180,25 @@ $(document).ready(function() {
     });
 });
 </script>
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(["setDomains", ["*.davidak.de","*.flickr.com","*.meinsack.davidak.de"]]);
+  _paq.push(['trackPageView']);
+_paq.push(['enableHeartBeatTimer', 15]);
+_paq.push(['trackVisibleContentImpressions']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//davidak.de/stats/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Piwik Code -->
+<noscript><p><img src="//davidak.de/stats/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
 """
 
 EXTRA_HEAD_DATA = """

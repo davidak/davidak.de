@@ -1,4 +1,4 @@
-Dies ist der Quelltext meiner Webseite [davidak.de](http://davidak.de/).
+Dies ist der Quelltext meiner privaten Webseite [davidak.de](http://davidak.de/).
 
 Die [Version 12](https://github.com/davidak/davidak.de/milestones/12) befindet sich gerade in der Entwicklung.
 
