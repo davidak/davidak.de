@@ -1,8 +1,8 @@
 .. title: Delete all the things
 .. slug: delete-all-the-things
 .. date: 2016-03-03 04:54:50 UTC+01:00
-.. tags: 
-.. description: 
+.. tags:
+.. description:
 .. type: text
 
 Ich liebe es nach dem Aufräumen des Rechners viele Dateien aus dem Papierkorb zu löschen.
@@ -24,5 +24,5 @@ Alte Pakete und Konfigurationen löschen::
 	[...]
 	deleting ‘/nix/store/trash’
 	deleting unused links...
-	note: currently hard linking saves 102.96 MiB
-	9560 store paths deleted, 7965.67 MiB freed
+	note: currently hard linking saves -0.00 MiB
+	15952 store paths deleted, 13964.95 MiB freed
