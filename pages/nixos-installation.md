@@ -13,7 +13,7 @@ Lade das neuste minimal ISO-Image von [nixos.org](http://nixos.org/nixos/downloa
 
 # WLAN einrichten (optional)
 
-Es wird eine Internet-Verbindung benötigt.
+Es wird eine Internet-Verbindung benötigt. Die restliche Konfiguration (IP-Adresse, DNS-Server und Gateway) wird automatisch über DHCP geholt.
 
     nano /etc/wpa_supplicant.conf
 
@@ -23,6 +23,36 @@ Es wird eine Internet-Verbindung benötigt.
     }
 
     systemctl restart wpa_supplicant.service
+
+# Zugriff per SSH (optional)
+
+Wenn du die Installation von einem anderen Rechner durchführen möchtest, auf dem du z.B. diese Anleitung offen hast, kannst du dich per SSH verbinden.
+
+Dafür muss erstmal der SSH-Server gestartet werden:
+
+    systemctl start sshd.service
+
+Damit du dich einloggen kannst braucht der Benutzer root ein Passwort:
+
+    passwd
+
+Jetzt noch die IP herausfinden und per SSH verbinden:
+
+    [root@nixos:~]# ip a
+    1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
+        link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+        inet 127.0.0.1/8 scope host lo
+           valid_lft forever preferred_lft forever
+        inet6 ::1/128 scope host
+           valid_lft forever preferred_lft forever
+    2: enp5s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+        link/ether d0:50:99:c0:60:b5 brd ff:ff:ff:ff:ff:ff
+        inet 10.0.2.95/8 brd 10.255.255.255 scope global enp5s0
+           valid_lft forever preferred_lft forever
+        inet6 fe80::d250:99ff:fec0:60b5/64 scope link
+           valid_lft forever preferred_lft forever
+
+    imac:~ davidak$ ssh root@10.0.2.95
 
 # Festplatte Partitionieren
 
@@ -86,7 +116,7 @@ Es ist trotzdem nötig, die Konfiguration im vorherigen Schritt zu erzeugen, da 
 
 Falls es während der Installation einen Fehler gibt, weil z.B. die Festplatte, auf der der Bootloader installiert werden soll nicht richtig angegeben ist, kannst du ihn einfach in der Konfiguration anpassen und `nixos-install` erneut ausführen.
 
-Am Ende der Installation wirst du nach dem Passwort für den root Benutzer gefragt. Achte darauf, dass die Live-CD ein englisches Tastatur-Layout hat!
+Am Ende der Installation wirst du nach dem Passwort für den root Benutzer gefragt. Achte darauf, dass die Live-CD ein englisches Tastatur-Layout hat (außer du bist per SSH verbunden)!
 
 Nach dem Neustart kannst du dich per `ssh` mit dem Rechner verbinden (falls er keinen Bildschirm und Tastatur hat) und die Konfiguration um die gewünschten Services erweitern.
 
