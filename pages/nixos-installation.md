@@ -32,7 +32,7 @@ Dafür muss erstmal der SSH-Server gestartet werden:
 
     systemctl start sshd.service
 
-Damit du dich einloggen kannst braucht der Benutzer root ein Passwort:
+Damit du dich einloggen kannst braucht der Benutzer root ein Passwort. Beachte, dass die Live-CD ein englisches Tastatur-Layout hat.
 
     passwd
 
@@ -54,9 +54,13 @@ Jetzt noch die IP herausfinden und per SSH verbinden:
 
     imac:~ davidak$ ssh root@10.0.2.95
 
-# Festplatte Partitionieren
+# Festplatte partitionieren und Dateisystem erstellen
 
-Eine primäre Partition mit dem gesamten Speicherplatz.
+## Mit LVM
+
+Wenn du NixOS in einer VM installierst macht es Sinn LVM zu verwenden, da du damit z.B. Partitionen (zur Laufzeit) vergrößern kannst.
+
+Eine primäre Partition mit dem gesamten Speicherplatz erstellen:
 
     fdisk /dev/vda
     n
@@ -64,6 +68,8 @@ Eine primäre Partition mit dem gesamten Speicherplatz.
     <ENTER>
     <ENTER>
     <ENTER>
+    t
+    8e
     p
     w
 
@@ -71,9 +77,7 @@ Falls du lieber `cfdisk` benutzt, kannst du es installieren mit:
 
     nix-env -iA nixos.utillinuxCurses
 
-# LVM einrichten und Dateisystem formatieren
-
-1 GB SWAP, der Rest für das root-Dateisystem (ext4).
+Dann Volumes für Swap (1 GB) und / (Rest) erstellen und Dateisystem (ext4) formatieren.
 
     pvcreate /dev/vda1
     vgcreate vg0 /dev/vda1
@@ -82,6 +86,36 @@ Falls du lieber `cfdisk` benutzt, kannst du es installieren mit:
     mkswap -L swap /dev/mapper/vg0-lvswap
     swapon /dev/mapper/vg0-lvswap
     mkfs.ext4 -L nixos /dev/mapper/vg0-lvroot
+
+## Ohne LVM
+
+Installierst du NixOS auf Hardware kannst du dir diese Abstraktionsschicht sparen.
+
+Für ein Desktop-System macht es Sinn 4 GB Swap zu verwenden.
+
+Eine Partition für Swap (1 GB) und eine für / (Rest) erstellen:
+
+    fdisk /dev/sda
+    n
+    p
+    <ENTER>
+    <ENTER>
+    +1G
+    t
+    82
+    n
+    p
+    <ENTER>
+    <ENTER>
+    <ENTER>
+    p
+    w
+
+Dann Dateisysteme formatieren:
+
+    mkswap -L swap /dev/sda1
+    swapon /dev/disk/by-label/swap
+    mkfs.ext4 -L nixos /dev/sda2
 
 # Partition mounten und Konfiguration erzeugen
 
@@ -94,17 +128,11 @@ Entweder du bearbeitest die Konfiguration per Hand
 
     nano /mnt/etc/nixos/configuration.nix
 
-oder kopierst eine vorbereitete. Meine findest du [hier](https://github.com/davidak/nixos-config/blob/master/minimal/configuration.nix).
-
-Dafür starte ich einen minimalen Webserver im Verzeichnis, in dem sich meine `configuration.nix` befindet:
-
-    imac:minimal davidak$ python -m SimpleHTTPServer 8082
-
-Auf dem NixOS lösche ich dann die automatisch erzeugte Konfiguration und lade meine runter.
+oder lädst eine Vorbereitete runter:
 
     cd /mnt/etc/nixos/
     rm configuration.nix
-    curl -O http://10.0.0.8:8082/configuration.nix
+    curl -O https://raw.githubusercontent.com/davidak/nixos-config/master/minimal/configuration.nix
 
 Es ist trotzdem nötig, die Konfiguration im vorherigen Schritt zu erzeugen, da auch für die Hardware eine passende Konfiguration erzeugt wird unter `/mnt/etc/nixos/hardware-configuration.nix`.
 
@@ -114,11 +142,11 @@ Es ist trotzdem nötig, die Konfiguration im vorherigen Schritt zu erzeugen, da 
     nixos-install
     reboot
 
-Falls es während der Installation einen Fehler gibt, weil z.B. die Festplatte, auf der der Bootloader installiert werden soll nicht richtig angegeben ist, kannst du ihn einfach in der Konfiguration anpassen und `nixos-install` erneut ausführen.
+Falls es während der Installation einen Fehler gibt, weil z.B. die Festplatte, auf der der Bootloader installiert werden soll nicht richtig angegeben ist, kannst du ihn einfach in der Konfiguration beheben und `nixos-install` erneut ausführen.
 
-Am Ende der Installation wirst du nach dem Passwort für den root Benutzer gefragt. Achte darauf, dass die Live-CD ein englisches Tastatur-Layout hat (außer du bist per SSH verbunden)!
+Am Ende der Installation wirst du nach dem Passwort für den Benutzer root gefragt. Wenn du nicht per SSH verbunden bist ist hier weiterhin das englische Tastatur-Layout zu beachten.
 
-Nach dem Neustart kannst du dich per `ssh` mit dem Rechner verbinden (falls er keinen Bildschirm und Tastatur hat) und die Konfiguration um die gewünschten Services erweitern.
+Nach dem Neustart des Systems kannst du die Konfiguration erweitern, um die gewünschten Services laufen zu lassen.
 
 Die Konfiguration meiner NixOS-Rechner (meist Server) findest du [auf Github](https://github.com/davidak/nixos-config).
 
