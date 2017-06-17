@@ -7,3 +7,7 @@ Es ändert sich die gesamte technische Basis. Vorher wurde der Blog durch Wordpr
 Auch die Konfiguration des Webservers in Form eines Caddyfile ist enthalten.
 
 Bei Fragen gerne bei mir melden. Kontaktmöglichkeiten findest du auf besagter Webseite.
+
+# Deployment
+
+    nikola build && nikola deploy
