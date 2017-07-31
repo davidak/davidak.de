@@ -9,11 +9,11 @@
 
 # Installationsmedium erstellen
 
-Lade das neuste minimal ISO-Image von [nixos.org](http://nixos.org/nixos/download.html) herunter. Erstelle z.B. mit `dd` einen bootbaren USB-Stick wie [hier](http://nixos.org/nixos/manual/index.html#sec-booting-from-usb) beschrieben oder brenne es auf eine CD. Starte die Live-CD auf dem Rechner, auf dem du NixOS installieren möchtest.
+Lade das neuste minimal ISO-Image von [nixos.org](http://nixos.org/nixos/download.html) runter. Erstelle z.B. mit `dd` einen bootbaren USB-Stick wie [hier](http://nixos.org/nixos/manual/index.html#sec-booting-from-usb) beschrieben oder brenne es auf eine CD. Starte die Live-CD auf dem Computer, auf dem du NixOS installieren möchtest.
 
 # WLAN einrichten (optional)
 
-Es wird eine Internet-Verbindung benötigt. Die restliche Konfiguration (IP-Adresse, DNS-Server und Gateway) wird automatisch über DHCP geholt.
+Es wird eine Internetverbindung benötigt, um Pakete runterzuladen. Du kannst den Computer per LAN-Kabel anschließen oder wie folgt WLAN einrichten.
 
     nano /etc/wpa_supplicant.conf
 
@@ -24,19 +24,21 @@ Es wird eine Internet-Verbindung benötigt. Die restliche Konfiguration (IP-Adre
 
     systemctl restart wpa_supplicant.service
 
+Die restliche Konfiguration (IP-Adresse, DNS-Server und Gateway) wird automatisch über DHCP geholt.
+
 # Zugriff per SSH (optional)
 
-Wenn du die Installation von einem anderen Rechner durchführen möchtest, auf dem du z.B. diese Anleitung offen hast, kannst du dich per SSH verbinden.
+Wenn du die Installation von einem anderen Computer durchführen möchtest, auf dem du z.B. diese Anleitung offen hast, kannst du dich per SSH verbinden.
 
 Dafür muss erstmal der SSH-Server gestartet werden:
 
-    systemctl start sshd.service
+    systemctl start sshd
 
 Damit du dich einloggen kannst braucht der Benutzer root ein Passwort. Beachte, dass die Live-CD ein englisches Tastatur-Layout hat.
 
     passwd
 
-Jetzt noch die IP herausfinden und per SSH verbinden:
+Jetzt noch die IP herausfinden und mit einem Terminal per SSH verbinden:
 
     [root@nixos:~]# ip a
     1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
@@ -58,7 +60,7 @@ Jetzt noch die IP herausfinden und per SSH verbinden:
 
 ## Mit LVM
 
-Wenn du NixOS in einer VM installierst macht es Sinn LVM zu verwenden, da du damit z.B. Partitionen (zur Laufzeit) vergrößern kannst.
+Wenn du NixOS in einer VM installierst macht es Sinn [LVM](https://de.wikipedia.org/wiki/Logical_Volume_Manager) zu verwenden, da du damit z.B. Partitionen (zur Laufzeit) vergrößern kannst.
 
 Eine primäre Partition mit dem gesamten Speicherplatz erstellen:
 
@@ -134,7 +136,25 @@ oder lädst eine Vorbereitete runter:
     rm configuration.nix
     curl -O https://raw.githubusercontent.com/davidak/nixos-config/master/minimal/configuration.nix
 
-Es ist trotzdem nötig, die Konfiguration im vorherigen Schritt zu erzeugen, da auch für die Hardware eine passende Konfiguration erzeugt wird unter `/mnt/etc/nixos/hardware-configuration.nix`.
+Es ist trotzdem nötig die Konfiguration im vorherigen Schritt zu erzeugen, da auch die Hardware-Konfiguration erzeugt wird unter `/mnt/etc/nixos/hardware-configuration.nix`.
+
+Du musst in jedem Fall die Festplatte angeben, auf der sich das Dateisystem `/` (das `/boot` enthält) befindet.
+
+    boot.loader.grub.device = "/dev/vda";
+
+Mir ist es auch wichtig nach der Installation ein deutsches Tastaturlayout (QWERTZ) zu haben.
+
+    i18n = {
+      consoleFont = "Lat2-Terminus16";
+      consoleKeyMap = "de";
+      defaultLocale = "en_US.UTF-8";
+    };
+
+Die [Locales](https://de.wikipedia.org/wiki/Locale) lasse ich gerne auf englisch, da man englische Fehlermeldungen besser googeln kann.
+
+Die Zeitzone stelle ich meinem Standort entsprechend ein, damit die Uhr stimmt.
+
+    time.timeZone = "Europe/Berlin";
 
 # NixOS installieren
 
@@ -142,13 +162,13 @@ Es ist trotzdem nötig, die Konfiguration im vorherigen Schritt zu erzeugen, da 
     nixos-install
     reboot
 
-Falls es während der Installation einen Fehler gibt, weil z.B. die Festplatte, auf der der Bootloader installiert werden soll nicht richtig angegeben ist, kannst du ihn einfach in der Konfiguration beheben und `nixos-install` erneut ausführen.
+Eventuell vorhandene Syntax-Fehler in der Konfigurationsdatei werden angezeigt. Nachdem du sie behoben hast einfach `nixos-install` erneut ausführen.
 
 Am Ende der Installation wirst du nach dem Passwort für den Benutzer root gefragt. Wenn du nicht per SSH verbunden bist ist hier weiterhin das englische Tastatur-Layout zu beachten.
 
-Nach dem Neustart des Systems kannst du die Konfiguration erweitern, um die gewünschten Services laufen zu lassen.
+Nach dem Neustart des Systems kannst du die Konfiguration erweitern, um die gewünschten Services laufen zu lassen. Eine Übersicht aller Optionen findest auf auf der [NixOS Webseite](https://nixos.org/nixos/options.html).
 
-Die Konfiguration meiner NixOS-Rechner (meist Server) findest du [auf Github](https://github.com/davidak/nixos-config).
+Die Konfiguration meiner NixOS-Systeme (meist Server) findest du auf [Github](https://github.com/davidak/nixos-config).
 
 # Quellen
 
