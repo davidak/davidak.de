@@ -5,7 +5,7 @@
 .. description: Versionen der Webseite
 .. type: text
 
-Seit 2005 hab ich eine private Webseite im Internet.
+Seit 2005 hab ich eine private Webseite im Internet. Auf dieser Seite siehst du wie sich das Design mit der Zeit weiterentwickelt hat.
 
 Version 0
 ---------
@@ -19,9 +19,9 @@ Version 1
 
 .. thumbnail:: /images/davidak.de-2005-2.png
 
-Stand 18.06.2005: Das Design hat sich stark verändert, immer noch mit `Phase 5`_ erstellt. Für die Grafiken hab ich Gimp_ benutzt.
+Stand 18.06.2005: Das Design hat sich stark verändert, immer noch mit `Phase 5`_ erstellt. Für die Grafiken habe ich Gimp_ verwendet.
 
-Die Seite war erreichbar über die kostenlose Domain **DavidMedia.de.ms** und gehostet bei dem ebenfalls kostenlosen `gwebspace.de`_. Dort gab es 250 MB Webspace und unbegrenzt Traffic!
+Die Seite war erreichbar über die kostenlose Domain **DavidMedia.de.ms** und gehostet bei dem ebenfalls kostenlosen `gwebspace.de`_. Dort gab es **250 MB Webspace** und unbegrenzt Traffic!
 
 Version 2
 ---------
@@ -37,7 +37,7 @@ Version 3
 
 Januar 2007: Startseite ist nur noch eine Weiterleitung zum Blog, den ich mit Wordpress_ betrieben habe.
 
-Die Seite war erreichbar über die kostenlose Domain **davidak.de.vu** und gehostet bei `funpic.org`_. Hier gab es für die Zeit gigantische 2,5 GB Speicherplatz, unbegrenzt Traffic sowie PHP und MySQL.
+Die Seite war erreichbar über die kostenlose Domain **davidak.de.vu** und gehostet bei `funpic.org`_. Hier gab es für die Zeit gigantische **2,5 GB Webspace**, unbegrenzt Traffic sowie PHP und MySQL.
 
 Ab dem 16.06.2007 war meine Webseite über die Domain **davidak.de** erreichbar. Gehostet bei `Host Europe`_.
 
@@ -78,6 +78,8 @@ Version 8
 
 Stand 17.05.2009: Rotes Design passend zum Blog.
 
+Ab dem 10.06.2009 war die Webseite bei `Schokokeks.org </blog/schokokeks-webhosting/>`_ gehostet.
+
 Version 9
 ---------
 
@@ -102,7 +104,13 @@ Am 26.12.2014 gab es ein ganz neues Design. Zusätzlich zum Profiltext gab es nu
 Version 12
 ----------
 
-Work in Progress
+Diese Version siehst du vor dir.
+
+Sie befindet sich noch in der Entwicklung. Es wird erstmal ein Standard-Theme verwendet.
+
+Der Quelltext ist nun auf `GitHub <https://github.com/davidak/davidak.de>`_ zu finden.
+
+Seit dem 02.05.2017 läuft die Webseite auf meinem eigenen Server bei `Hetzner`_.
 
 .. _Phase 5: https://de.wikipedia.org/wiki/HTML-Editor_Phase_5
 .. _Gimp: https://www.gimp.org/
@@ -110,3 +118,4 @@ Work in Progress
 .. _Wordpress: https://de.wordpress.org/
 .. _funpic.org: https://web.archive.org/web/20070707220139/http://www.funpic.org/
 .. _Host Europe: https://www.hosteurope.de/
+.. _Hetzner: https://www.hetzner.de/
