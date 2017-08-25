@@ -1,9 +1,9 @@
 <!--
-.. title: Blogparade Webspace-Inventar
+.. title: Blogparade: Webspace-Inventar
 .. slug: 1337-blogparade-webspace-inventar
 .. date: 2015-06-10 21:13:27
-.. tags: Blog,Internet,Open Source,Software
-.. description: 
+.. tags: Internet,Open Source,Software,Webhosting
+.. description:
 .. type: text
 -->
 
