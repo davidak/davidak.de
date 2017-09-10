@@ -1,10 +1,10 @@
-Dies ist der Quelltext meiner privaten Webseite [davidak.de](http://davidak.de/).
+Dies ist der Quelltext meiner privaten Webseite.
 
-Die [Version 12](https://github.com/davidak/davidak.de/milestones/12) befindet sich gerade in der Entwicklung.
+Auch die Konfiguration des Webservers ([Caddy](https://caddyserver.com/)) ist in Form eines [Caddyfile](https://github.com/davidak/davidak.de/blob/master/files/Caddyfile) enthalten.
 
-Es ändert sich die gesamte technische Basis. Vorher wurde der Blog durch Wordpress und das Wiki mit DokuWiki betrieben. Nun werden alle Inhalte zusammengefügt und es wird durch Nikola eine statische Webseite gebaut. Mehr dazu folgt in einem Blogeintrag.
+Die [Version 12](https://github.com/davidak/davidak.de/milestones/12) befindet sich noch in der Entwicklung, ist aber schon online.
 
-Auch die Konfiguration des Webservers in Form eines Caddyfile ist enthalten.
+Wie die vorherigen Versionen aussahen kannst du auf https://davidak.de/rueckblick-webseite/ sehen.
 
 Bei Fragen gerne bei mir melden. Kontaktmöglichkeiten findest du auf besagter Webseite.
 

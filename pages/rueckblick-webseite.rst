@@ -106,7 +106,9 @@ Version 12
 
 Diese Version siehst du vor dir.
 
-Sie befindet sich noch in der Entwicklung. Es wird erstmal ein Standard-Theme verwendet.
+Statt `Wordpress`_ für den Blog und `DokuWiki`_ für das Wiki wird nun `Nikola`_ eingesetzt, um eine statische Webseite zu generieren.
+
+Die Seite befindet sich noch in der Entwicklung. Es wird erstmal ein Standard-Theme verwendet.
 
 Der Quelltext ist nun auf `GitHub <https://github.com/davidak/davidak.de>`_ zu finden.
 
@@ -119,3 +121,6 @@ Seit dem 02.05.2017 läuft die Webseite auf meinem eigenen Server bei `Hetzner`_
 .. _funpic.org: https://web.archive.org/web/20070707220139/http://www.funpic.org/
 .. _Host Europe: https://www.hosteurope.de/
 .. _Hetzner: https://www.hetzner.de/
+.. _Wordpress: https://de.wordpress.org/
+.. _DokuWiki: https://www.dokuwiki.org/
+.. _Nikola: https://getnikola.com/
