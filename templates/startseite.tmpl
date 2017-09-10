@@ -1,0 +1,34 @@
+{#  -*- coding: utf-8 -*- #}
+{% import 'post_helper.tmpl' as helper with context %}
+{% import 'post_header.tmpl' as pheader with context %}
+{% extends 'base.tmpl' %}
+
+{% block extra_head %}
+    {{ super() }}
+    {% if post.meta('keywords') %}
+    <meta name="keywords" content="{{ post.meta('keywords')|e }}">
+    {% endif %}
+    <meta name="author" content="{{ post.author()|e }}">
+    {{ helper.open_graph_metadata(post) }}
+    {{ helper.twitter_card_information(post) }}
+    {{ helper.meta_translations(post) }}
+    <style>
+      div.e-content.entry-content {
+        font-size: 120%;
+      }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="e-content entry-content" itemprop="text">
+    {{ post.text() }}
+    </div>
+{% endblock %}
+
+{% block sourcelink %}
+{% if show_sourcelink %}
+    <li>
+    <a href="{{ post.source_link() }}" id="sourcelink">{{ messages("Source") }}</a>
+    </li>
+{% endif %}
+{% endblock %}
