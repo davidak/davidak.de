@@ -1,9 +1,7 @@
+.. title: Impressum
 .. date: 2016-02-28 23:22:20 UTC+01:00
 .. type: text
 .. nocomments: True
-
-Impressum
-=========
 
 Inhaltlich Verantwortlicher gemäß § 55 Abs. 2 RStV:
 
