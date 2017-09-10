@@ -1,9 +1,7 @@
+.. title: Wartezimmer
 .. date: 2014-12-26 04:44
 .. tags: Arzt, Warten
 .. type: text
-
-Wartezimmer
-===========
 
 Wenn man im Wartezimmer beim Arzt 1 bis 2 Stunden rumsitzt, macht man sich über ansonsten unwichtige Dinge Gedanken.
 
