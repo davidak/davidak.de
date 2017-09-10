@@ -8,9 +8,10 @@
 .. pretty_url: False
 .. nocomments: True
 .. template: startseite.tmpl
-.. license: KK
 
-Hallo, mein Name ist David Kleuker. Im Internet besser bekannt als **davidak**.
+<p class="lead">
+Hallo, ich bin David Kleuker. Im Internet besser bekannt als <strong>davidak</strong>.
+</p>
 
 Ich wurde **1989 im Norden Deutschlands geboren**. Danach musste ich oft umziehen. Aktuell lebe ich in **[Osnabrück](https://de.wikipedia.org/wiki/Osnabrück)**.
 
@@ -28,11 +29,12 @@ Als **Künstler** erstelle ich Fotos und Videos. Die Werke sind oft experimentel
 
 ## Lebensstil
 
-> Sei selbst die Veränderung, die du dir wünschst für diese Welt.
+<blockquote>
+  <p>Sei selbst die Veränderung, die du dir wünschst für diese Welt.</p>
+  <footer>Mahatma Gandhi</footer>
+</blockquote>
 
--- Mahatma Gandhi
-
-Für mich bedeutet das konkret, jeden Tag **bewusst zu leben, kritisch zu hinterfragen, informierte Entscheidungen zu treffen** und danach zu handeln.
+Ich möchte auch im Alltag etwas verändern, indem ich jeden Tag **bewusst lebe, kritisch hinterfrage, informierte Entscheidungen treffe und danach handele**.
 
 Auf meinen Geräten bevorzuge ich **[Freie Software](https://fsfe.org/about/basics/freesoftware.de.html)**, weil deren Lizenz dem Benutzer die Freiheiten gibt, das Programm zu jedem Zweck zu nutzen, die Funktionsweise zu untersuchen und an die eigenen Anforderungen anzupassen sowie das Programm an andere Menschen weiterzugeben. **Open Source** ist nur ein Teil davon, aber als Bezeichnung weiter verbreitet.
 
