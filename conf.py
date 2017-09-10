@@ -499,9 +499,6 @@ DEPLOY_COMMANDS = {
     'staging': [
         "rsync -rah --progress --delete output/ davidak@binary.lan:/var/www/davidak/web/",
     ],
-    'beta': [
-        "rsync -rah --progress --delete output/ schokokeks.org:websites/beta",
-    ],
 }
 
 # github_deploy configuration
