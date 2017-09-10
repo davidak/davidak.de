@@ -1,8 +1,6 @@
+.. title: Einfacher Counter in Perl
 .. date: 2013/06/16 18:06
 .. type: text
-
-Einfacher Counter in Perl
-=========================
 
 Beschreibung
 ------------

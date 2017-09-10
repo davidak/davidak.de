@@ -1,8 +1,6 @@
+.. title: Java Projects - HTML Template
 .. date: 2013/06/16 18:06
 .. type: text
-
-Java Projects - HTML Template
-=============================
 
 Java Projects war ursprünglich gedacht, um meine Java-Programme zu veröffentlichen.
 

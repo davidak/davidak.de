@@ -1,8 +1,6 @@
+.. title: Sophos Anti-Virus und Enterprise Console
 .. date: 2009-10-05
 .. type: text
-
-Sophos Anti-Virus und Enterprise Console
-========================================
 
 Beschreibung
 ------------

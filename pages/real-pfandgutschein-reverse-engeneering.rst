@@ -1,8 +1,6 @@
+.. title: Real Pfandgutschein Reverse Engeneering
 .. date: 2013/06/16 20:16
 .. type: text
-
-Real Pfandgutschein Reverse Engeneering
-=======================================
 
 Damit ließe sich möglicherweise "Geld" drucken.
 

@@ -1,8 +1,6 @@
+.. title: Photoshop - Text Game in Java
 .. date: 2013/06/16 18:06
 .. type: text
-
-Photoshop - Text Game in Java
-=============================
 
 Beschreibung
 ------------

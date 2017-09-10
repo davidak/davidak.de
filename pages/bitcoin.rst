@@ -1,8 +1,6 @@
+.. title: Bitcoin
 .. date: 2013/10/09 20:54
 .. type: text
-
-Bitcoin
-=======
 
 `Bitcoin <http://de.wikipedia.org/wiki/Bitcoin>`_ ist eine elektronische Währung.
 

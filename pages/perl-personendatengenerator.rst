@@ -1,8 +1,6 @@
+.. title: Personendatengenerator in Perl
 .. date: 2013/06/16 18:06
 .. type: text
-
-Personendatengenerator in Perl
-==============================
 
 Das Script für die `Personendatenbank <http://davidak.de/personen/>`_.
 

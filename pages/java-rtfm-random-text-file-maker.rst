@@ -1,8 +1,6 @@
+.. title: RTFM - Random Text File Maker
 .. date: 2013/06/16 18:06
 .. type: text
-
-RTFM - Random Text File Maker
-=============================
 
 Beschreibung
 ------------
@@ -40,15 +38,15 @@ rtfm.java
 
          * RTFM - RANDOM TEXT FILE MAKER
          * Version 0.4 Beta
-         * 
+         *
          * David Kleuker
          * www.davidak.de
          */
-        
+
         public static void main(String[] args) {
-            
+
             Random r = new Random();
-            
+
             // Variablen
             String name="User";
             String cpuname="Computer";
@@ -57,8 +55,8 @@ rtfm.java
             int anzz = 10;
             int rand = 0;
             int i=0;
-            
-            
+
+
             System.out.println("RTFM - RANDOM TEXT FILE MAKER");
             System.out.println("Versio 0.4");
             System.out.println();
@@ -66,20 +64,20 @@ rtfm.java
             System.out.println("www.davidak.de");
             System.out.println("------------------------------");
             System.out.println();
-            
+
             System.out.print(cpuname+": Wie lautet dein Name: ");
             name = Eingabe.leseString();
             System.out.println(cpuname+": Hallo "+name+"!");
-            
-            
+
+
             System.out.println();
             System.out.println(cpuname+": Schreib 'help' um die Hilfe zu oeffnen oder tippe ein Befehl ein.");
             System.out.println();
-            
-            
+
+
             //Befehlseingabeschleife
             while (!eingabe.equals("ende")) {
-                
+
                 System.out.println();
                 System.out.println("------------------------------");
                 System.out.println(cpuname+": Bitte Befehl eingeben!");
@@ -87,9 +85,9 @@ rtfm.java
                 eingabe = Eingabe.leseString();
                 System.out.println("------------------------------");
                 System.out.println();
-                
-                
-                
+
+
+
                 // Hilfe
                 if (eingabe.equals("help")) {
                     System.out.println("RTFM Hilfe");
@@ -113,8 +111,8 @@ rtfm.java
                     System.out.println("mtf");
                     System.out.println("'make text file' - Generiert eine Textdatei");
                 }
-                
-                
+
+
                 // Textdatei erzeugen
                 if (eingabe.equals("mtf")) {
                     System.out.println("MAKE TEXT FILE:");
@@ -126,13 +124,13 @@ rtfm.java
                     System.out.println(cpuname+": Anzahl zufaelliger Zeichen: ");
                     System.out.print(name+": ");
                     anzz = Eingabe.leseInt();
-                    
+
                     // warnen wenn mehr als 10MB
                     if (anzz>10000000) {
                         System.out.println(cpuname+": Die Datei kann mehr als 100MB werden. Weitermachen? j/n: ");
                         System.out.print(name+": ");
                         eingabe = Eingabe.leseString();
-                        
+
                         if (eingabe.equals("n")) {
                             System.out.println(cpuname+": Es wurde keine Datei erzeugt.");
                             System.out.println(cpuname+": Das Programm wird nun beendet.");
@@ -142,13 +140,13 @@ rtfm.java
                         }
                         else System.out.println(cpuname+": Ich hab dich gewarnt!");
                     }
-                    
-                    
+
+
                     Date dNow = new Date();
                     Date dNoww = new Date();
                     SimpleDateFormat datumm = new SimpleDateFormat ("dd.MM.yyyy");
                     SimpleDateFormat zeitt = new SimpleDateFormat ("HH:mm");
-                    
+
                     // Datei schreiben
                     try {
                     BufferedWriter out = new BufferedWriter(new FileWriter(textname+".txt"));
@@ -166,12 +164,12 @@ rtfm.java
                     out.newLine();
                     out.newLine();
                     out.newLine();
-                    
+
                     // Alle zufallszahlen generieren und schreiben
                     while(i<anzz) {
                         i++;
                         rand = r.nextInt(10);
-                        
+
                         // Zeichen generieren
                         if (rand==0) { out.write("0"); }
                         if (rand==1) { out.write("1"); }
@@ -183,24 +181,24 @@ rtfm.java
                         if (rand==7) { out.write("7"); }
                         if (rand==8) { out.write("8"); }
                         if (rand==9) { out.write("9"); }
-                        
+
                         // alle 100 Zeichen eine neue Zeile
                         if (i % 100==0) { out.newLine(); }
                     }
-                    
+
                     i=0;
                     out.close();
                     System.out.println(cpuname+": Datei erfolgreich erstellt.");
                     }
-                    
+
                     catch (IOException e) {
                         System.out.println(cpuname+": Schreiben der Datei fehlgeschlagen.");
                         System.out.println("Fehler "+e.toString());
                     }
-                    
+
                 }
-                
-                
+
+
                 // Name ndern
                 if (eingabe.equals("set name")) {
                     System.out.print(cpuname+": Neuer Name: ");
@@ -208,9 +206,9 @@ rtfm.java
                     System.out.println();
                     System.out.println(cpuname+": "+name+" ist auch ein toller Name!");
                 }
-                
-                
-                
+
+
+
                 // CPU Name ndern
                 if (eingabe.equals("set cpuname")) {
                     System.out.print(cpuname+": Neuer Name fr mich: ");
@@ -218,33 +216,33 @@ rtfm.java
                     System.out.println();
                     System.out.println(cpuname+": "+cpuname+" ist auch ein toller Name!");
                 }
-                
-                
-                
+
+
+
                 // Beenden
                 if (eingabe.equals("ende")) {
                     break;
                 }
-                
-                
-                
+
+
+
                 // Beenden
                 if (eingabe.equals("exit")) {
                     eingabe = "ende";
                     break;
                 }
-                
-                
-                
+
+
+
                 // Beenden
                 if (eingabe.equals("quit")) {
                     eingabe = "ende";
                     break;
                 }
-                
-            
+
+
             }
-            
+
             // Ende des Programms
             System.out.println("Tschss, "+name+"!");
             System.out.println();
@@ -276,7 +274,7 @@ Eingabe.java
 
       public static String leseString(){
         String ergebnis;
-        
+
         BufferedReader in = new BufferedReader( new InputStreamReader(System.in));
         try {
             ergebnis=in.readLine();
@@ -293,8 +291,8 @@ Eingabe.java
         } catch (NumberFormatException e) {
             ergebnis=0;
         }
-        
-        return ergebnis;        
+
+        return ergebnis;
       }
 
       public static float leseFloat(){
@@ -304,8 +302,8 @@ Eingabe.java
         } catch (NumberFormatException e) {
             ergebnis=0f;
         }
-        
-        return ergebnis;        
+
+        return ergebnis;
       }
 
       public static double leseDouble(){
@@ -315,8 +313,8 @@ Eingabe.java
         } catch (NumberFormatException e) {
             ergebnis=0d;
         }
-        
-        return ergebnis;        
+
+        return ergebnis;
       }
 
       public static boolean leseBoolean(){
@@ -326,8 +324,8 @@ Eingabe.java
         } catch (NumberFormatException e) {
             ergebnis=false;
         }
-        
-        return ergebnis;        
+
+        return ergebnis;
       }
 
     // rein zu Testzwecken hier stehen gelassen, kann gelöscht werden

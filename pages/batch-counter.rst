@@ -1,8 +1,6 @@
+.. title: Einfacher Counter in Batch (Windows)
 .. date: 2013/06/13 18:06
 .. type: text
-
-Einfacher Counter in Batch
-==========================
 
 Beschreibung
 ------------

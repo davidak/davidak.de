@@ -1,8 +1,6 @@
+.. title: Wörter sortieren und doppelte löschen in Perl
 .. date: 2013/06/16 18:06
 .. type: text
-
-Wörter sortieren und doppelte löschen in Perl
-=============================================
 
 Beschreibung
 ------------

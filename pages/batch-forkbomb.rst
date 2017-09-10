@@ -1,8 +1,6 @@
+.. title: Fork-Bomb in Batch (Windows)
 .. date: 2013/06/16 18:06
 .. type: text
-
-Fork-Bomb in Batch
-==================
 
 Beschreibung
 ------------

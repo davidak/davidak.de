@@ -1,8 +1,6 @@
+.. title: Sprechstunde
 .. date: 2009-12-02
 .. type: text
-
-Sprechstunde
-============
 
 Beschreibung
 ------------

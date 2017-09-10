@@ -1,9 +1,7 @@
+.. title: RSS-Feed mit Perl erzeugen
 .. date: 2013/06/16 18:06
 .. updated: 2016-08-12 20:58:00 UTC+01:00
 .. type: text
-
-RSS-Feed mit Perl erzeugen
-==========================
 
 Source Code
 -----------

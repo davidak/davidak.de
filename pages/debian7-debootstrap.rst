@@ -1,8 +1,6 @@
+.. title: Installation von debian 7 per debootstrap
 .. date: 2013/06/16 19:55
 .. type: text
-
-Installation von debian 7 per debootstrap
-=========================================
 
 Quelle: http://www.debian.org/releases/stable/i386/apds03.html.de
 

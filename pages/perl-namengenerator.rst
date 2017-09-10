@@ -1,8 +1,6 @@
+.. title: Namengenerator in Perl
 .. date: 2013/06/16 18:06
 .. type: text
-
-Namengenerator in Perl
-======================
 
 Beschreibung
 ------------

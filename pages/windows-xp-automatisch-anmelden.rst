@@ -1,8 +1,6 @@
+.. title: Windows XP automatisch anmelden
 .. date: 2013/06/16 20:07
 .. type: text
-
-Windows XP automatisch anmelden
-===============================
 
 Beschreibung
 ------------

@@ -1,8 +1,6 @@
+.. title: Shutdown-"Virus" für Windows
 .. date: 2013/06/16 18:06
 .. type: text
-
-Shutdown-"Virus" für Windows
-============================
 
 Beschreibung
 ------------

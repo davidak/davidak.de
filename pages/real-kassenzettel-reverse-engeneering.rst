@@ -1,8 +1,6 @@
+.. title: Real Kassenzettel Reverse Engeneering
 .. date: 2013/06/16 20:15
 .. type: text
-
-Real Kassenzettel Reverse Engeneering
-=====================================
 
 Ein kleines Projekt um zu lernen, wie man einen Barcode rekonstruiert. Es geht mir nicht um Real sondern um die Vorgehensweise dabei. Ich hatte einen Barcodescanner zur Verfügung, ein `Online Tool <http://online-barcode-reader.inliteresearch.com/>`_ kann aber auch benutzt werden.
 
@@ -30,7 +28,7 @@ Barcodes
 | E ? Filiale
 | F Payback Punkte
 | G ?
-| 
+|
 | Y Jahr
 | M Monat
 | D Tag

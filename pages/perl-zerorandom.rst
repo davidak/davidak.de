@@ -1,8 +1,6 @@
+.. title: ZERORANDOM
 .. date: 2013-06-16 18:06
 .. type: text
-
-ZERORANDOM
-==========
 
 Ein Experiment zum Thema **Zufall**.
 
@@ -121,7 +119,7 @@ Grundlage
 .. code-block:: perl
 
     #!/usr/bin/perl -w
-     
+
     $int = '0';
 
     for ($i = 1; $i < 1000; $i++) {

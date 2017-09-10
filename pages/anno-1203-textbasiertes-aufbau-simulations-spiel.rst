@@ -1,8 +1,6 @@
+.. title: Anno 1203 - textbasiertes Aufbau-Simulations-Spiel in Java
 .. date: 2013/06/16 18:06
 .. type: text
-
-Anno 1203 - textbasiertes Aufbau-Simulations-Spiel in Java
-==========================================================
 
 Beschreibung
 ------------

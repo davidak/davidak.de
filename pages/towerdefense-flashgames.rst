@@ -1,8 +1,6 @@
+.. title: Tower Defense Flashgames
 .. date: 2015-04-25 21:04
 .. type: text
-
-Tower Defense Flashgames
-=========================
 
 Bei dieser Art von Spielen muss man sich mit dem richtigen Platzieren von Türmen verteidigen.
 

@@ -1,8 +1,6 @@
+.. title: CPU Referat mit Präsentation und Ausarbeitung (Download)
 .. date: 2013/06/16 20:12
 .. type: text
-
-CPU Referat mit Präsentation und Ausarbeitung als Download
-==========================================================
 
 Beschreibung
 ------------
