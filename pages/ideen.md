@@ -7,6 +7,12 @@
 
 Ich hab viele (gute) Ideen, aber zu wenig Zeit alle zeitnah umzusetzen. Vielleicht inspiriert dich etwas davon!
 
+# Warteschleifen DJ
+
+Kunst-Performance, bei der ein DJ statt Musik bei Hotlines anruft und somit die Warteschleifenmusik spielt.
+
+Besonders witzig ist, wenn jemand ran geht und der DJ sagt: "DJ ... hier, ich hab nur die Warteschleifenmusik gebraucht. Sie haben noch die Möglichkeit 800 Leute auf der Party zu grüßen!"
+
 # Distributed zero-effort system monitoring
 
 - systemd knows state of services, can restart failed services
