@@ -24,6 +24,11 @@ Screenshot
 
 .. thumbnail:: /images/crrafooyouh.gif
 
+Video
+-----
+
+.. media:: https://www.youtube.com/watch?v=DSMAwYTp1xw
+
 Download
 --------
 
