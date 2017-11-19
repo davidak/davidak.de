@@ -1,6 +1,7 @@
 .. title: davidak.de
 .. slug: index
-.. date: 2017-09-10 22:26:59 UTC+02:00
+.. date: 2016-02-28 23:24:45 UTC+01:00
+.. updated: 2017-09-10 22:26:59 UTC+02:00
 .. tags:
 .. description: Die private Webseite von davidak.
 .. type: text
