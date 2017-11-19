@@ -1,7 +1,7 @@
 .. title: davidak.de
 .. slug: index
 .. date: 2016-02-28 23:24:45 UTC+01:00
-.. updated: 2017-09-10 22:26:59 UTC+02:00
+.. updated: 2017-11-19 20:40:00 UTC+01:00
 .. tags:
 .. description: Die private Webseite von davidak.
 .. type: text
@@ -26,7 +26,7 @@ Die letzten Jahre habe ich viel über die Probleme in der Welt nachgedacht. Jetz
 
 Darüber hinaus sehe ich mich als **Investor in eine lebenswerte Zukunft**. Ich spende jeden Monat an Projekte und Organisationen wie [foodwatch](https://www.foodwatch.org/de/startseite/), [netzpolitik.org](https://netzpolitik.org/) und die [Free Software Foundation Europe](https://fsfe.org/index.de.html). Um die Idee vom [bedingungslosen Grundeinkommen](http://www.buergerinitiative-grundeinkommen.de/) weiter zu verbreiten spende ich monatlich an [Mein Grundeinkommen](https://www.mein-grundeinkommen.de/), [GiveDirectly](https://givedirectly.org/basic-income) und das [Netzwerk Grundeinkommen](https://www.grundeinkommen.de/). Auch zahlreiche Einzelspenden und unterstützte Crowdfundings helfen Projekten, die Welt etwas besser zu machen und innovative Produkte zu entwickeln.
 
-Als **Künstler** erstelle ich Fotos und Videos. Die Werke sind oft experimentell, düster oder provokant. Sie werden unter einer [freien Lizenz](https://de.creativecommons.org/) veröffentlicht.
+Als **Künstler** erstelle ich Fotos und [Videos](/video/). Die Werke sind oft experimentell, düster oder provokant. Sie werden unter einer [freien Lizenz](https://de.creativecommons.org/) veröffentlicht.
 
 ## Lebensstil
 
