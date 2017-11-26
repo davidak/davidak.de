@@ -459,7 +459,7 @@ URL_TYPE = 'rel_path'
 # the browser resolve relative links.
 # In some rare cases, this will be a problem, and you can
 # disable it by setting USE_BASE_TAG to False.
-USE_BASE_TAG = True
+USE_BASE_TAG = False
 
 # Final location for the blog main RSS feed is:
 # output / TRANSLATION[lang] / RSS_PATH / rss.xml

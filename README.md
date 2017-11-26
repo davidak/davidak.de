@@ -13,3 +13,8 @@ Bei Fragen gerne bei mir melden. Kontaktmöglichkeiten findest du auf besagter W
 # Deployment
 
     nikola build && nikola deploy
+
+# Publish to [IPFS](https://ipfs.io/)
+
+    ipfs add -r output/
+    ipfs name publish SITE_HASH
