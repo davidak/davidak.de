@@ -58,6 +58,52 @@ Jetzt noch die IP herausfinden und mit einem Terminal per SSH verbinden:
 
 # Festplatte partitionieren und Dateisystem erstellen
 
+## Mit LVM und verschlüsseltem Dateisystem
+
+Bei mobilen Geräten, wie Notebooks, ist es wichtig die persönlichen Daten zu verschlüsseln. LVM ermöglicht das Vergrößern von Partitionen, wodurch du dein System z.B. auf eine größere Festplatte umziehen kannst.
+
+Eine 500 MB Partition für /boot und den Rest für LVM.
+
+    fdisk /dev/sda
+    n
+    <ENTER>
+    <ENTER>
+    +500M
+    n
+    <ENTER>
+    <ENTER>
+    <ENTER>
+    <ENTER>
+    t
+    <ENTER>
+    8e
+    w
+
+Verschlüsselte Partition mit LUKS erstellen.
+
+    cryptsetup luksFormat /dev/sda2
+    cryptsetup luksOpen /dev/sda2 enc-pv
+
+Nun werden 2 logical Volumes mit LVM erstellt. 8 GB SWAP und Rest für das root Dateisystem.
+
+    pvcreate /dev/mapper/enc-pv
+    vgcreate vg0 /dev/mapper/enc-pv
+    lvcreate -L 8G -n swap vg0
+    lvcreate -l '100%FREE' -n root vg0
+
+Dateisystem auf Partitionen formatieren.
+
+    mkfs.ext4 -L boot /dev/sda1
+    mkfs.ext4 -L root /dev/mapper/vg0-root
+    mkswap -L swap /dev/mapper/vg0-swap
+
+Partitionen mounten:
+
+    mount /dev/mapper/vg0-root /mnt
+    mkdir /mnt/boot
+    mount /dev/sda1 /mnt/boot
+    swapon /dev/mapper/vg0-swap
+
 ## Mit LVM
 
 Wenn du NixOS in einer VM installierst macht es Sinn [LVM](https://de.wikipedia.org/wiki/Logical_Volume_Manager) zu verwenden, da du damit z.B. Partitionen (zur Laufzeit) vergrößern kannst.
@@ -66,7 +112,7 @@ Eine primäre Partition mit dem gesamten Speicherplatz erstellen:
 
     fdisk /dev/vda
     n
-    p
+    <ENTER>
     <ENTER>
     <ENTER>
     <ENTER>
@@ -99,14 +145,14 @@ Eine Partition für Swap (1 GB) und eine für / (Rest) erstellen:
 
     fdisk /dev/sda
     n
-    p
+    <ENTER>
     <ENTER>
     <ENTER>
     +1G
     t
     82
     n
-    p
+    <ENTER>
     <ENTER>
     <ENTER>
     <ENTER>
@@ -142,6 +188,19 @@ Du musst in jedem Fall die Festplatte angeben, auf der sich das Dateisystem `/` 
 
     boot.loader.grub.device = "/dev/vda";
 
+Bei einem verschlüsselten Dateisystem ist auch dieser Block nötig:
+
+    boot.initrd.luks.devices = [
+      {
+        name = "root";
+        device = "/dev/disk/by-uuid/06e7d974-9549-4be1-8ef2-f013efad727e";
+        preLVM = true;
+        allowDiscards = true;
+      }
+    ];
+
+Die UUID der Partition bekommst du mit `blkid`.
+
 Mir ist es auch wichtig nach der Installation ein deutsches Tastaturlayout (QWERTZ) zu haben.
 
     i18n = {
@@ -174,3 +233,4 @@ Die Konfiguration meiner NixOS-Systeme (meist Server) findest du auf [Github](ht
 
 - <http://nixos.org/nixos/manual/index.html#sec-installation>
 - <http://bencane.com/2011/12/19/creating-a-new-filesystem-with-fdisk-lvm-and-mkfs/>
+- <https://gist.github.com/martijnvermaat/76f2e24d0239470dd71050358b4d5134>
