@@ -203,7 +203,7 @@ Bei einem verschlüsselten Dateisystem ist auch dieser Block nötig:
       }
     ];
 
-Die UUID der Partition bekommst du mit `blkid`.
+Die UUID der Partition `/dev/mapper/enc-pv` bekommst du mit `blkid`.
 
 Mir ist es auch wichtig nach der Installation ein deutsches Tastaturlayout (QWERTZ) zu haben.
 
