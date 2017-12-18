@@ -68,6 +68,7 @@ Eine 500 MB Partition für /boot und den Rest für LVM.
     n
     <ENTER>
     <ENTER>
+    <ENTER>
     +500M
     n
     <ENTER>
@@ -77,6 +78,7 @@ Eine 500 MB Partition für /boot und den Rest für LVM.
     t
     <ENTER>
     8e
+    p
     w
 
 Verschlüsselte Partition mit LUKS erstellen.
@@ -110,13 +112,14 @@ Wenn du NixOS in einer VM installierst macht es Sinn [LVM](https://de.wikipedia.
 
 Eine primäre Partition mit dem gesamten Speicherplatz erstellen:
 
-    fdisk /dev/vda
+    fdisk /dev/sda
     n
     <ENTER>
     <ENTER>
     <ENTER>
     <ENTER>
     t
+    <ENTER>
     8e
     p
     w
@@ -127,8 +130,8 @@ Falls du lieber `cfdisk` benutzt, kannst du es installieren mit:
 
 Dann Volumes für Swap (1 GB) und / (Rest) erstellen und Dateisystem (ext4) formatieren.
 
-    pvcreate /dev/vda1
-    vgcreate vg0 /dev/vda1
+    pvcreate /dev/sda1
+    vgcreate vg0 /dev/sda1
     lvcreate -L 1G -n lvswap vg0
     lvcreate -l 100%FREE -n lvroot vg0
     mkswap -L swap /dev/mapper/vg0-lvswap
@@ -150,6 +153,7 @@ Eine Partition für Swap (1 GB) und eine für / (Rest) erstellen:
     <ENTER>
     +1G
     t
+    <ENTER>
     82
     n
     <ENTER>
@@ -186,7 +190,7 @@ Es ist trotzdem nötig die Konfiguration im vorherigen Schritt zu erzeugen, da a
 
 Du musst in jedem Fall die Festplatte angeben, auf der sich das Dateisystem `/` (das `/boot` enthält) befindet.
 
-    boot.loader.grub.device = "/dev/vda";
+    boot.loader.grub.device = "/dev/sda";
 
 Bei einem verschlüsselten Dateisystem ist auch dieser Block nötig:
 
@@ -214,6 +218,13 @@ Die [Locales](https://de.wikipedia.org/wiki/Locale) lasse ich gerne auf englisch
 Die Zeitzone stelle ich meinem Standort entsprechend ein, damit die Uhr stimmt.
 
     time.timeZone = "Europe/Berlin";
+
+Um mich nach der Ins5tallation per SSH verbinden zu können aktiviere ich den SSH-Server und gebe Login als root frei.
+
+    services.openssh = {
+      enable = true;
+      permitRootLogin = "yes";
+    };
 
 # NixOS installieren
 
