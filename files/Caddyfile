@@ -14,17 +14,17 @@ davidak.de {
   }
 
   log /var/www/davidak/log/access.log {
-    rotate {
-      age 96
-      keep 10
-    }
+    rotate_size 100
+    rotate_age 96
+    rotate_keep 10
+    rotate_compress
   }
 
-  errors {
-    log /var/www/davidak/log/error.log {
-      age 96
-      keep 10
-    }
+  errors /var/www/davidak/log/error.log {
+    rotate_size 100
+    rotate_age 96
+    rotate_keep 10
+    rotate_compress
   }
 
   # Rewrite RSS-Feed
