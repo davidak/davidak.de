@@ -10,11 +10,17 @@ Wie die vorherigen Versionen aussahen kannst du auf https://davidak.de/rueckblic
 
 Bei Fragen gerne bei mir melden. Kontaktmöglichkeiten findest du auf besagter Webseite.
 
-# Deployment
+## Deployment
+
+Mit folgendem Befehl startest du eine Shell, in der Nikola verfügbar ist. Nikola wird dabei nicht persistent auf dem System installiert. Das funktioniert derzeit nicht unter macOS ([#32087](https://github.com/NixOS/nixpkgs/issues/32087)), nur auf Linux. Damit das funktioniert muss der Paketmanager [Nix](https://nixos.org/nix/) auf deinem System installiert sein.
+
+    nix-shell -p python36Packages.Nikola
+
+Mit diesen beiden Befehlen wird die Webseite gebaut und auf den Server deployt.
 
     nikola build && nikola deploy
 
-# Publish to [IPFS](https://ipfs.io/)
+## Publish to [IPFS](https://ipfs.io/)
 
     ipfs add -r output/
     ipfs name publish SITE_HASH
