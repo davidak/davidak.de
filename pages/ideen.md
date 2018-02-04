@@ -7,6 +7,15 @@
 
 Ich hab viele (gute) Ideen, aber zu wenig Zeit alle zeitnah umzusetzen. Vielleicht inspiriert dich etwas davon!
 
+# GTA like Game using Real World Maps from OpenStreetMap
+
+- i had the idea as i saw that someone used [OSM2World](http://osm2world.org/) to generate a [map for SuperTuxKart](https://wiki.openstreetmap.org/wiki/SuperTuxKart)
+- [here](https://www.youtube.com/watch?v=780Ia5e8LHQ) someone had the same idea and started implementing it in Unity
+- there are other [videos on youtube](https://www.youtube.com/watch?v=GLkOQpjzs_o) in which people used OSM data to generate game maps (in Unity)
+- i would use an open source game engine and publish the game as open source software, so the community can help enhance it
+- the [OSM map of the whole planet](https://planet.openstreetmap.org/) is currently (2018-02-04) 63 GB big, so you might want to use only [your city or country](https://download.geofabrik.de/)
+- such game can also be used for learning to drive some way you want to travel or just drive around your city
+
 # Warteschleifen DJ
 
 Kunst-Performance, bei der ein DJ statt Musik bei Hotlines anruft und somit die Warteschleifenmusik spielt.
