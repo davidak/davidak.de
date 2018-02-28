@@ -17,7 +17,7 @@ Die Qualität der Videos war sehr schlecht, also habe ich Geld gespart, um mir d
 
 {{% media url="https://youtu.be/Yr_zZ6Y9Hk0" %}}
 
-2004 war ich das erste mal bei der Sommerferienfreizeit des Deutschen Roten Kreuz dabei. Dort wurden verschiedene Aktivitäten angeboten. Eine Gruppe hat einen Film darüber gedreht. So hatte ich die Möglichkeit mit einem MiniDV-Camcorder zu filmen und von einem Kameramann des NDR zu lernen, wie man damit umgeht. Das hat mir soviel Spaß gemacht, dass ich **Kameramann** werden wollte.
+2004 war ich das erste mal bei der Sommerferienfreizeit des Deutschen Roten Kreuz dabei. Dort wurden verschiedene Aktivitäten angeboten. Eine Gruppe hat einen Film darüber gedreht. So hatte ich die Möglichkeit mit einem MiniDV-Camcorder zu filmen und von einem Kameramann des NDR zu lernen. Das hat mir soviel Spaß gemacht, dass ich **Kameramann** werden wollte.
 
 Dabei hatte ich auch [Adobe Premiere](https://de.wikipedia.org/wiki/Adobe_Premiere) kennen gelernt, was ich dann auch zuhause verwendet habe.
 
@@ -25,13 +25,13 @@ Dabei hatte ich auch [Adobe Premiere](https://de.wikipedia.org/wiki/Adobe_Premie
 
 Während der Schulzeit habe ich ein Praktikum bei einer Fotografin und einer Videoproduktion gemacht.
 
-Ebenfalls habe ich mehrere Fotokurse bei der [VHS](https://de.wikipedia.org/wiki/Volkshochschule) besucht, in dem ich unter anderem Grundlagen der Bildgestaltung gelernt habe. Das ist auch bei Video sehr wichtig.
+Ebenfalls habe ich mehrere Fotokurse bei der [VHS](https://de.wikipedia.org/wiki/Volkshochschule) besucht, in denen ich unter anderem Grundlagen der Bildgestaltung gelernt habe. Das ist auch bei Video sehr wichtig.
 
 Nach der Schule habe ich mich bei allen Firmen in der näheren Umgebung, die eine Ausbildung zum [Mediengestalter Bild und Ton](https://de.wikipedia.org/wiki/Mediengestalter_Bild_und_Ton) anbieten, beworben. Beim NDR kamen 900 Bewerber auf einen Ausbildungsplatz und sie haben Abiturienten bevorzugt, daher habe ich es aufgegeben.
 
-Während meiner Ausbildung im IT-Bereich habe ich in der Freizeit weiter Videos gemacht. Ich hatte Geld gespart und ein [Apple MacBook](https://de.wikipedia.org/wiki/MacBook) gekauft, auf dem ich erst mit [iMovie](https://de.wikipedia.org/wiki/IMovie) geschnitten hab, später mit [FinalCut Pro](https://de.wikipedia.org/wiki/Final_Cut_Pro).
+Während meiner Ausbildung im IT-Bereich habe ich in der Freizeit weiter Videos gemacht. Ich hatte Geld gespart und ein [Apple MacBook](https://de.wikipedia.org/wiki/MacBook) gekauft, auf dem ich erst mit [iMovie](https://de.wikipedia.org/wiki/IMovie), später mit [FinalCut Pro](https://de.wikipedia.org/wiki/Final_Cut_Pro) geschnitten habe.
 
-Meist hatte ich dann mit einer **Canon IXUS 70** (digitale Kompaktkamera) gefilmt, da ich sie immer dabei hatte. Zwischenzeitlich hatte ich auch Camcorder und Mirrorless-Kameras getestet, aber die Qualität hat mich nicht überzeugt.
+Meist hatte ich dann mit einer **Canon IXUS 70** (digitale Kompaktkamera) gefilmt, da ich sie immer dabei hatte. Zwischenzeitlich hatte ich auch teurere Camcorder und Systemkameras getestet, aber die Qualität hat mich nicht überzeugt.
 
 Dieser experimentelle Film ist mit einem miniDV-Camcorder gefilmt:
 
@@ -51,7 +51,7 @@ Diesen Vortrag hab ich z.B. gemischt. (Dass der Ton am Anfang nicht zu hören is
 
 {{% media url="https://www.youtube.com/watch?v=lYkHftvd8sg" %}}
 
-Im Jahr 2014 hatte ich die Möglichkeit beim Moers Festival **Kameramann** zu sein. Das Festival wurde live bei **ARTE** gestreamt. Das wurde von Studenten der [Kunsthochschule für Medien Köln](https://www.khm.de/home/) und dem [Institut für Musik und Medien Düsseldorf](http://www.rsh-duesseldorf.de/institute/institut-fuer-musik-und-medien/) gemacht. Da ein Freund von mir an der KHM Regie studiert hat, konnte ich auch mitmachen. Es ging 3 Tage und ich hab bei jeder Band eine Kamera gemacht, bis auf ein Mal, bei dem ich **Regie/Bildmischer** war.
+Im Jahr 2014 hatte ich die Möglichkeit beim Moers Festival **Kameramann** zu sein. Das 3 tägige Festival wurde live bei **ARTE** gestreamt. Das wurde von Studenten der [Kunsthochschule für Medien Köln](https://www.khm.de/home/) und dem [Institut für Musik und Medien Düsseldorf](http://www.rsh-duesseldorf.de/institute/institut-fuer-musik-und-medien/) gemacht. Da ein Freund von mir an der KHM Regie studiert hat, konnte ich auch mitmachen. Es ging 3 Tage und ich hab bei jeder Band eine der 6 Kameras übernommen, bis auf ein Mal, bei dem ich **Regie/Bildmischer** war.
 
 Am Anfang war ich noch etwas zögerlich (es war das erste Mal für mich), aber nach kurzer Zeit lief es gut.
 
@@ -59,7 +59,7 @@ Am Anfang war ich noch etwas zögerlich (es war das erste Mal für mich), aber n
 
 Ich bin mit dem Ergebnis zufrieden!
 
-Ebenfalls 2014 gab es ein Crowdfunding für die [apertus° AXIOM Beta](https://www.apertus.org/axiom-beta), eine [Open Hardware](https://de.wikipedia.org/wiki/Open-Source-Hardware) [digitale Filmkamera](https://de.wikipedia.org/wiki/Digitale_Kinokamera). Von der Idee war ich sofort begeistert, da ich die Philosophie von **Freier Software** und **Open Hardware** super finde. Die Qualität sollte hier endlich passen, da damit auch Kinofilme gefilmt werden können. Preislich eigentlich weit über meinem Budget, aber als Unterstützer des Crowdfundings bekomme ich sie zum Einkaufspreis der Bauteile. Außerdem kann ich mich ins Projekt einbringen, und sie so verbessern oder die Entwicklung beschleunigen.
+Ebenfalls 2014 gab es ein Crowdfunding für die [apertus° AXIOM Beta](https://www.apertus.org/axiom-beta), eine [Open Hardware](https://de.wikipedia.org/wiki/Open-Source-Hardware) [digitale Filmkamera](https://de.wikipedia.org/wiki/Digitale_Kinokamera). Von der Idee war ich sofort begeistert, da ich von der  Philosophie von **Freier Software** und **Open Hardware** überzeugt bin. Die Qualität sollte meinen hohen Ansprüchen genügen, da sie auch für Kinofilme gedacht ist. Preislich eigentlich weit über meinem Budget, aber als Unterstützer des Crowdfundings bekomme ich sie zum Einkaufspreis. Außerdem kann ich mich ins Projekt einbringen und so aktiv zur Entwicklung beitragen.
 
 So war ich 2017 in Wien beim Mitgründer des Projekts, konnte sie testen und etwas mitarbeiten. ([Bericht](https://apertus.org/one-week-with-the-axiom-team-article-nov-2017))
 
