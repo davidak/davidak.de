@@ -20,9 +20,18 @@ NixOS
 
 Alte Pakete und Konfigurationen löschen::
 
-	nix-collect-garbage -d
-	[...]
-	deleting ‘/nix/store/trash’
+	[root@X230:~]# nix-env --delete-generations old
+	removing generation 1
+	removing generation 2
+
+	[root@X230:~]# nix-collect-garbage -d
+	...
+	deleting '/nix/store/trash'
 	deleting unused links...
-	note: currently hard linking saves -0.00 MiB
-	15952 store paths deleted, 13964.95 MiB freed
+	note: currently hard linking saves 1977.80 MiB
+	23427 store paths deleted, 19590.66 MiB freed
+
+Nix-Store optimieren, in dem identische Dateien durch Hardlinks ersetzt werden::
+
+	[root@X230:~]# nix optimise-store
+	[36327 paths optimised, 10924.6 MiB / 962109 inodes freed]
