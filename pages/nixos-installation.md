@@ -11,6 +11,12 @@
 
 Lade das neuste minimal ISO-Image von [nixos.org](http://nixos.org/nixos/download.html) runter. Erstelle z.B. mit `dd` einen bootbaren USB-Stick wie [hier](http://nixos.org/nixos/manual/index.html#sec-booting-from-usb) beschrieben oder brenne es auf eine CD. Starte die Live-CD auf dem Computer, auf dem du NixOS installieren möchtest.
 
+# Tastaturlayout umstellen
+
+Mit diesem Befehl wird das deutsche Tastaturlayout aktiviert:
+
+    loadkeys de
+
 # WLAN einrichten (optional)
 
 Es wird eine Internetverbindung benötigt, um Pakete runterzuladen. Du kannst den Computer per LAN-Kabel anschließen oder wie folgt WLAN einrichten.
@@ -96,15 +102,15 @@ Nun werden 2 logical Volumes mit LVM erstellt. 8 GB SWAP und Rest für das root 
 Dateisystem auf Partitionen formatieren.
 
     mkfs.ext4 -L boot /dev/sda1
-    mkfs.ext4 -L root /dev/mapper/vg0-root
+    mkfs.ext4 -L nixos /dev/mapper/vg0-root
     mkswap -L swap /dev/mapper/vg0-swap
 
 Partitionen mounten:
 
-    mount /dev/mapper/vg0-root /mnt
+    mount /dev/disk/by-label/nixos /mnt
     mkdir /mnt/boot
-    mount /dev/sda1 /mnt/boot
-    swapon /dev/mapper/vg0-swap
+    mount /dev/disk/by-label/boot /mnt/boot
+    swapon /dev/disk/by-label/swap
 
 ## Mit LVM
 
@@ -135,7 +141,7 @@ Dann Volumes für Swap (1 GB) und / (Rest) erstellen und Dateisystem (ext4) form
     lvcreate -L 1G -n lvswap vg0
     lvcreate -l 100%FREE -n lvroot vg0
     mkswap -L swap /dev/mapper/vg0-lvswap
-    swapon /dev/mapper/vg0-lvswap
+    swapon /dev/disk/by-label/swap
     mkfs.ext4 -L nixos /dev/mapper/vg0-lvroot
 
 ## Ohne LVM
@@ -203,7 +209,7 @@ Bei einem verschlüsselten Dateisystem ist auch dieser Block nötig:
       }
     ];
 
-Die UUID der Partition `/dev/mapper/enc-pv` bekommst du mit `blkid`.
+Die UUID der Partition `/dev/sda` bekommst du mit `blkid`.
 
 Mir ist es auch wichtig nach der Installation ein deutsches Tastaturlayout (QWERTZ) zu haben.
 
