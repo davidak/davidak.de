@@ -7,8 +7,6 @@
 .. description:
 .. type: text
 
-# Einleitung
-
 Ich treffe informierte Entscheidungen, denen oft eine längere Recherche zugrunde liegt. Damit auch Andere davon profitieren habe ich diese Seite erstellt.
 
 Meine Kriterien sind dabei:
@@ -20,6 +18,10 @@ Meine Kriterien sind dabei:
 - es sollte nachhaltig hergestellt werden
 
 Teilweise müssen Kompromisse gemacht werden, wenn keine der vorhandenen Lösungen dem Anspruch gerecht wird.
+
+**Übersicht**
+
+[TOC]
 
 # Software
 
@@ -66,10 +68,34 @@ Ich habe gute Erfahrung mit gebrauchter Business-Hardware z.B. von [ITSCO](https
 
 ## E-Mail
 
-## Internet
+### [mailbox.org](https://mailbox.org/)
+
+### [posteo.de](https://posteo.de/)
 
 # Lizenzen
 
+## GNU General Public License (GPL)
+
+Für Software Quelltext
+
+Vergleich mit anderen Open Source-Lizenzen: <https://choosealicense.com/>
+
+Deutsche Übersetzung: <http://www.gnu.de/documents/gpl.de.html>
+
+## Creative Commons Attribution Share Alike (CC-BY-SA)
+
+Für Medien und Daten wie Texte, Bilder, Videos und Audio
+
+Webseite: <https://creativecommons.org/licenses/by-sa/4.0/>
+
 # Lebensmittel
 
+Möglichst unverarbeitet, Rohkost Anteil, regional und bio.
+
 # Ernährung
+
+vegan
+
+**Achtung**: Vitamin B12 muss suplimentiert werden!
+
+Informationen und Produkte bei diesem Händler: <https://www.sunday.de/vitamin-b12-vegan-vegetarier/>

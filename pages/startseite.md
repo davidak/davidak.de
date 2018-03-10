@@ -35,7 +35,7 @@ Als **Künstler** erstelle ich Fotos und [Videos](/video/). Die Werke sind oft e
   <footer>Mahatma Gandhi</footer>
 </blockquote>
 
-Ich möchte auch im Alltag etwas verändern, indem ich jeden Tag **bewusst lebe, kritisch hinterfrage, informierte Entscheidungen treffe und danach handele**.
+Ich möchte auch im Alltag etwas verändern, indem ich jeden Tag **bewusst lebe, kritisch hinterfrage, informierte Entscheidungen treffe und danach handele**. Beispiele dafür sind in meinen [Empfehlungen](/empfehlungen/) zu finden.
 
 Auf meinen Geräten bevorzuge ich **[Freie Software](https://fsfe.org/about/basics/freesoftware.de.html)**, weil deren Lizenz dem Benutzer die Freiheiten gibt, das Programm zu jedem Zweck zu nutzen, die Funktionsweise zu untersuchen und an die eigenen Anforderungen anzupassen sowie das Programm an andere Menschen weiterzugeben. **Open Source** ist nur ein Teil davon, aber als Bezeichnung weiter verbreitet.
 
