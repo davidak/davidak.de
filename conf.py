@@ -1129,6 +1129,13 @@ USE_BUNDLES = False
 # rendered
 GLOBAL_CONTEXT_FILLER = []
 
+from nikola import filters
+FILTERS = {
+    ".html": [filters.add_header_permalinks, filters.deduplicate_ids]
+}
+
+HEADER_PERMALINKS_FILE_BLACKLIST = ['output/index.html']
+
 # localsearch Tipue plugin
 SEARCH_FORM = """
 <span class="navbar-form navbar-right">
