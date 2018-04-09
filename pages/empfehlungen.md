@@ -27,7 +27,7 @@ Teilweise müssen Kompromisse gemacht werden, wenn keine der vorhandenen Lösung
 
 ## [Chromium](https://www.chromium.org/Home) (Webbrowser)
 
-Performanter, stabiler und sicherer Open Source-Browser. Basis von Chrome, aber ohne das Tracking.
+Performanter, stabiler und sicherer Open Source-Browser. Basis von Chrome, aber [ohne das Tracking](https://de.wikipedia.org/wiki/Chromium_(Browser)#Unterschiede_zu_Google_Chrome).
 
 ## Chrome-/Chromium-Extensions (Browser-Erweiterungen)
 
