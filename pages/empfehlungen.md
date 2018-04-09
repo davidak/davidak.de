@@ -25,6 +25,22 @@ Teilweise müssen Kompromisse gemacht werden, wenn keine der vorhandenen Lösung
 
 # Software
 
+## Betriebssysteme
+
+### [elementary OS](https://elementary.io/)
+
+Elegante und benutzerfreundliche GNU/Linux-Distribution. Gefällt mir als ehemaliger Mac-User sehr gut!
+
+Baut auf Ubuntu LTS auf, wodurch man Zugriff auf über 25.000 Software-Pakete hat. Release alle 2 Jahre.
+
+### [NixOS](https://nixos.org/)
+
+Innovative GNU/Linux-Distribution, bei der das System durch eine Konfigurationsdatei bestimmt wird. Besonders praktisch für Server, da **Configuration Management** ins Betriebssystem integriert ist, aber auch für erfahrene GNU/Linux-Nutzer, die die Flexibilität von Arch Linux oder Gentoo mögen, aber auf kompilierte Pakete und stabile Versionen zurückgreifen möchten.
+
+Es gibt alle 6 Monate einen stabilen Release und einen unstable rolling Release Channel.
+
+Meine Konfigurationen findest du auf [Github](https://github.com/davidak/nixos-config).
+
 ## [Chromium](https://www.chromium.org/Home) (Webbrowser)
 
 Performanter, stabiler und sicherer Open Source-Browser. Basis von Chrome, aber [ohne das Tracking](https://de.wikipedia.org/wiki/Chromium_(Browser)#Unterschiede_zu_Google_Chrome).
