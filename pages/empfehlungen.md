@@ -94,7 +94,7 @@ Möglichst unverarbeitet, Rohkost Anteil, regional und bio.
 
 # Ernährung
 
-Die gesündeste, nachhaltigste und ethisch korrekteste Ernährung ist rein Pflanzlich (vegan).
+Die gesündeste, nachhaltigste und ethisch korrekteste Ernährung ist rein pflanzlich (vegan).
 
 Fakten zu dem Thema werden in diesem kurzen Video gut zusammengefasst:
 
