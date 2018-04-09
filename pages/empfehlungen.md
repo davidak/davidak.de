@@ -94,8 +94,12 @@ Möglichst unverarbeitet, Rohkost Anteil, regional und bio.
 
 # Ernährung
 
-vegan
+Die gesündeste, nachhaltigste und ethisch korrekteste Ernährung ist rein Pflanzlich (vegan).
+
+Fakten zu dem Thema werden in diesem kurzen Video gut zusammengefasst:
+
+{{% media url="https://youtu.be/8rK-USZ51TQ" %}}
 
 **Achtung**: Vitamin B12 muss suplimentiert werden!
 
-Informationen und Produkte bei diesem Händler: <https://www.sunday.de/vitamin-b12-vegan-vegetarier/>
+Informationen und gute Produkte bei diesem Händler: <https://www.sunday.de/vitamin-b12-vegan-vegetarier/>
