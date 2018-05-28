@@ -72,5 +72,3 @@ Hier ein paar Szenen, die wir gefilmt haben:
 # Zukunft
 
 2018 werde ich meine eigene **AXIOM Beta** bekommen. Ich möchte wieder mehr Videos machen, vorallem Reportagen und Dokumentationen.
-
-Ich träume davon eines Tages mit Video Geld zu verdienen.
