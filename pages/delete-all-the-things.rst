@@ -23,15 +23,26 @@ Alte Pakete und Konfigurationen löschen::
 	[root@X230:~]# nix-env --delete-generations old
 	removing generation 1
 	removing generation 2
+	removing generation 3
+	...
 
 	[root@X230:~]# nix-collect-garbage -d
 	...
 	deleting '/nix/store/trash'
 	deleting unused links...
-	note: currently hard linking saves 1977.80 MiB
-	23427 store paths deleted, 19590.66 MiB freed
+	note: currently hard linking saves 194.23 MiB
+	60548 store paths deleted, 72496.71 MiB freed
 
 Nix-Store optimieren, in dem identische Dateien durch Hardlinks ersetzt werden::
 
 	[root@X230:~]# nix optimise-store
-	[36327 paths optimised, 10924.6 MiB / 962109 inodes freed]
+	[15151 paths optimised, 2045.9 MiB / 172840 inodes freed]
+
+systemd journal
+---------------
+
+Alle Einträge außer die der letzten 2 Tage aus dem Journal löschen::
+
+	[root@X230:~]# journalctl --vacuum-time=2d
+	...
+	Vacuuming done, freed 3.6G of archived journals from /var/log/journal/b8781c43275e4719a76ba46fb15b92cb.
