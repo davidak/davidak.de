@@ -14,11 +14,15 @@ Bei Fragen gerne bei mir melden. Kontaktmöglichkeiten findest du auf besagter W
 
 Mit folgendem Befehl startest du eine Shell, in der Nikola verfügbar ist. Nikola wird dabei nicht persistent auf dem System installiert. Das funktioniert derzeit nicht unter macOS ([#32087](https://github.com/NixOS/nixpkgs/issues/32087)), nur auf Linux. Damit das funktioniert muss der Paketmanager [Nix](https://nixos.org/nix/) auf deinem System installiert sein.
 
-    nix-shell -p python36Packages.Nikola
+    nix run '((import <nixpkgs> {}).python3.withPackages (ps: with ps; [Nikola micawber]))'
 
 Mit diesen beiden Befehlen wird die Webseite gebaut und auf den Server deployt.
 
     nikola build && nikola deploy
+
+Eventuell ist es nötig, die zuvor generierten Daten zu löschen, da sie zum Teil read-only sind.
+
+    rm -rf output/
 
 ## Publish to [IPFS](https://ipfs.io/)
 
