@@ -194,7 +194,7 @@ oder lädst eine Vorbereitete runter:
 
 Es ist trotzdem nötig die Konfiguration im vorherigen Schritt zu erzeugen, da auch die Hardware-Konfiguration erzeugt wird unter `/mnt/etc/nixos/hardware-configuration.nix`.
 
-Du musst in jedem Fall die Festplatte angeben, auf der sich das Dateisystem `/` (das `/boot` enthält) befindet.
+Du musst in jedem Fall die Festplatte angeben, auf der sich das Dateisystem `/` (das `/boot` enthält) befindet, damit der Bootmanager GRUB darauf installiert werden kann.
 
     boot.loader.grub.device = "/dev/sda";
 
@@ -209,7 +209,7 @@ Bei einem verschlüsselten Dateisystem ist auch dieser Block nötig:
       }
     ];
 
-Die UUID der Partition `/dev/sda` bekommst du mit `blkid`.
+Die UUID der Partition bekommst du mit `blkid /dev/sda2`.
 
 Mir ist es auch wichtig nach der Installation ein deutsches Tastaturlayout (QWERTZ) zu haben.
 
@@ -219,13 +219,13 @@ Mir ist es auch wichtig nach der Installation ein deutsches Tastaturlayout (QWER
       defaultLocale = "en_US.UTF-8";
     };
 
-Die [Locales](https://de.wikipedia.org/wiki/Locale) lasse ich gerne auf englisch, da man englische Fehlermeldungen besser googeln kann.
+Die [Locales](https://de.wikipedia.org/wiki/Locale) lasse ich auf englisch, da es bei der Suche nach Fehlermeldungen im Internet auf englisch mehr Ergebnisse gibt.
 
-Die Zeitzone stelle ich meinem Standort entsprechend ein, damit die Uhr stimmt.
+Die Zeitzone stelle ich meinem Standort entsprechend ein, damit die Uhrzeit stimmt.
 
     time.timeZone = "Europe/Berlin";
 
-Um mich nach der Ins5tallation per SSH verbinden zu können aktiviere ich den SSH-Server und gebe Login als root frei.
+Um mich nach der Installation per SSH verbinden zu können aktiviere ich den SSH-Server und erlaube Login als root.
 
     services.openssh = {
       enable = true;
@@ -234,17 +234,12 @@ Um mich nach der Ins5tallation per SSH verbinden zu können aktiviere ich den SS
 
 # NixOS installieren
 
-    nix-channel --update
     nixos-install
     reboot
 
-Eventuell vorhandene Syntax-Fehler in der Konfigurationsdatei werden angezeigt. Nachdem du sie behoben hast einfach `nixos-install` erneut ausführen.
+Eventuell vorhandene Syntax-Fehler in der Konfigurationsdatei werden angezeigt. Nachdem du sie behoben hast einfach erneut `nixos-install` ausführen. Am Ende der Installation musst du das Passwort für den Benutzer root eingeben.
 
-Am Ende der Installation wirst du nach dem Passwort für den Benutzer root gefragt. Wenn du nicht per SSH verbunden bist ist hier weiterhin das englische Tastatur-Layout zu beachten.
-
-Nach dem Neustart des Systems kannst du die Konfiguration erweitern, um die gewünschten Services laufen zu lassen. Eine Übersicht aller Optionen findest auf auf der [NixOS Webseite](https://nixos.org/nixos/options.html).
-
-Die Konfiguration meiner NixOS-Systeme (meist Server) findest du auf [Github](https://github.com/davidak/nixos-config).
+Nach dem Neustart des Systems kannst du die Konfigurationsdatei erweitern, um die gewünschten Services laufen zu lassen. Eine Übersicht aller Optionen findest auf auf der [NixOS Webseite](https://nixos.org/nixos/options.html). Die Konfiguration meiner NixOS-Systeme findest du auf [Github](https://github.com/davidak/nixos-config).
 
 # Quellen
 
