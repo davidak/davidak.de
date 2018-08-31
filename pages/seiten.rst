@@ -1,7 +1,7 @@
 .. title: Alle Seiten
 .. slug: seiten
 .. date: 1970-01-01
-.. description: Eine Liste aller Seiten
+.. description: Liste aller Seiten
 .. type: text
 .. nocomments: True
 

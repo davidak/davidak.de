@@ -92,7 +92,7 @@ Allerdings sind die anderen Modelle in der Statistik auch ziemlich gut. Wichtig 
 
 Es lohnt sich nicht gebrauchte Festplatten zu kaufen.
 
-## Solid-State-Drive (SSD)
+## Solid-State-Drives (SSD)
 
 Für die Systempartition eines Computers, auf der das Betriebssystem und Programme installiert sind, empfehle ich eine SSD. Diese haben eine spürbar höhere Lese- und Schreibgeschwindigkeit, wodurch Programme schneller starten und sich das Arbeiten flüssiger anfühlt. Sie besitzen keine mechanischen Teile, haben einen sehr geringen Energieverbrauch und arbeiten geräuschlos.
 
