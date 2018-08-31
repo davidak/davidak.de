@@ -51,6 +51,7 @@ Performanter, stabiler und sicherer Open Source-Browser. Basis von Chrome, aber 
 - [Axel Springer Blocker](https://chrome.google.com/webstore/detail/axel-springer-blocker-asb/cbnipbdpgcncaghphljjicfgmkonflee) - Blockiert die Propaganda des Axel Springer-Konzerns
 - [HTTPS Everywhere](https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp) - HTTP auf HTTPS weiterleiten (für bekannte Domains)
 - [HTTPS Finder](https://chrome.google.com/webstore/detail/https-finder/fmbbgedgoimcifgdghmifpnpcfaioena) - HTTP auf HTTPS weiterleiten (automatisch geprüft)
+- [Terms of Service; Didn’t Read](https://chrome.google.com/webstore/detail/hjdoplcnndgiblooccencgcggcoihigg) - Bewertung von Nutzungsbedingungen im Hinblick auf Privatsphäre
 - [The Great Suspender](https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg) - Ungenutzte Tabs nach einiger Zeit sperren, um Arbeitsspeicher und CPU frei zu geben
 - [Auto Refresh](https://chrome.google.com/webstore/detail/auto-refresh/ifooldnmmcmlbdennkpdnlnbgbmfalko) - Webseite nach einstellbarem Intervall neu laden
 - [Page load time](https://chrome.google.com/webstore/detail/page-load-time/fploionmjgeclbkemipmkogoaohcdbig) - Seitenladezeit anzeigen und aufschlüsseln
@@ -62,23 +63,49 @@ Performanter, stabiler und sicherer Open Source-Browser. Basis von Chrome, aber 
 
 ## Computer
 
-Ich habe gute Erfahrung mit gebrauchter Business-Hardware z.B. von [ITSCO](https://www.itsco.de/) gemacht.
+Ich habe gute Erfahrung mit gebrauchter Business-Hardware gemacht. Bei [ITSCO](https://www.itsco.de/) gibt es zum Beispiel [Desktop-PCs von HP](https://www.itsco.de/computer/hp-compaq-pcs), [Workstations von Dell](https://www.itsco.de/workstation/dell-workstation) oder [Notebooks von Lenovo](https://www.itsco.de/notebooks/lenovo-laptops). Letztere findest du auch bei [Thinkstore24.de](https://www.thinkstore24.de/laptops/?p=1&o=1&n=12&s=8).
 
 <details>
 <summary>mehr anzeigen</summary>
 <p>
 **Pro**
 
-- sehr günstiger Preis im Vergleich zu neuen Computern
+- sehr günstiger Preis im Vergleich zu neuer Hardware
 - zuverlässig und langlebig im Gegensatz zu Consumer-Hardware
 
 **Contra**
 
 - nicht die aktuellste Technik
 - eventuell Gebrauchsspuren
+- eventuell fehlen Komponenten wie Festplatte. steht aber dabei und kann problemlos separat gekauft werden
 - keine Garantie
 </p>
 </details>
+
+## Festplatten (HDD)
+
+Nachdem mir in der Vergangenheit Festplatten von Western Digital und Seagate nach weniger als 2 Jahren kaputt gegangen sind, verwende ich in meinem NAS nur noch [HGST Deskstar NAS](https://www.hgst.com/products/hard-drives/nas-desktop-drive-kit).
+
+Diese Festplatten sind laut [Statistiken des Cloud Backup-Anbieters Backblaze](https://www.backblaze.com/b2/hard-drive-test-data.html) die Zuverlässigsten.
+
+Allerdings sind die anderen Modelle in der Statistik auch ziemlich gut. Wichtig ist hier, für ein NAS, dass 24/7 läuft, auch spezielle NAS Festplatten zu verwenden.
+
+Es lohnt sich nicht gebrauchte Festplatten zu kaufen.
+
+## Solid-State-Drive (SSD)
+
+Für die Systempartition eines Computers, auf der das Betriebssystem und Programme installiert sind, empfehle ich eine SSD. Diese haben eine spürbar höhere Lese- und Schreibgeschwindigkeit, wodurch Programme schneller starten und sich das Arbeiten flüssiger anfühlt. Sie besitzen keine mechanischen Teile, haben einen sehr geringen Energieverbrauch und arbeiten geräuschlos.
+
+Ich habe folgende Modelle im Einsatz:
+
+- Crucial M4 SSD
+- SanDisk SSD PLUS
+- SanDisk Ultra 3D SSD
+- Samsung SSD 850 EVO
+
+Diese funktionieren seit mehreren Jahren zuverlässig.
+
+Da der Preis von SSDs stark fällt (bei manchen Modellen in einem Jahr halbiert!) und sich die Technik schnell weiterentwickelt, lohnt es sich nicht gebrauchte Hardware oder sehr alte Modelle zu kaufen.
 
 # Infrastruktur
 
