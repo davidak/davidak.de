@@ -41,6 +41,32 @@ Es gibt alle 6 Monate einen stabilen Release und einen unstable rolling Release 
 
 Meine Konfigurationen findest du auf [Github](https://github.com/davidak/nixos-config).
 
+## Android
+
+### App-Stores
+
+- [F-Droid](https://f-droid.org/de/) - Android App-Store mit Freier und Open Source Software
+- [Yalp Store](https://f-droid.org/de/packages/com.github.yeriomin.yalpstore/) - Apps aus dem Google Play Store installieren und aktualisieren
+
+### Apps
+
+- [AndStatus](https://f-droid.org/de/packages/org.andstatus.app/) - Client für [Mastodon](https://joinmastodon.org/), [Twitter](https://twitter.com/) und andere soziale Netzwerke
+- [Conversations](https://f-droid.org/de/packages/eu.siacs.conversations/) - Jabber/XMPP Messanger mit [OMEMO](https://conversations.im/omemo/) (Ende-zu-Ende-Verschlüsselung)
+- [Wire](https://play.google.com/store/apps/details?id=com.wire&hl=en) - Sicherer und benutzerfreundlicher Messanger ([noch nicht in F-Droid](https://github.com/wireapp/wire-android/issues/233))
+- [StreetComplete](https://f-droid.org/de/packages/de.westnordost.streetcomplete/) - Zu [OpenStreetMap](https://www.openstreetmap.org/) beitragen durch Lösen von einfachen Aufgaben, z.B. Hausnummer herausfinden
+- [Vespucci](https://f-droid.org/de/packages/de.blau.android/) - Erweiterter [OpenStreetMap](https://www.openstreetmap.org/)-Editor
+- [OsmAnd](https://f-droid.org/de/packages/net.osmand.plus/) - Navigation mit der [OpenStreetMap](https://www.openstreetmap.org/) (auch offline!)
+- [Transportr](https://f-droid.org/de/packages/de.grobox.liberario/) - Verbindungen mit öffentlichem Personennahverkehr (ÖPNV) finden
+- [Wetter](https://f-droid.org/de/packages/org.secuso.privacyfriendlyweather/) - Wettervorhersage für den aktuellen Tag und Rest der Woche
+- [Suntimes](https://f-droid.org/de/packages/com.forrestguice.suntimeswidget) - Uhrzeit des Sonnenaufgangs und Sonnenuntergangs des aktuellen Tages anzeigen
+- [Meditation Assistant](https://f-droid.org/de/packages/sh.ftp.rocketninelabs.meditationassistant.opensource/) - Meditationstimer und Statistik
+- [Shattered Pixel Dungeon](https://f-droid.org/de/packages/com.shatteredpixel.shatteredpixeldungeon/) Klassisches [Roguelike](https://de.wikipedia.org/wiki/Rogue-like) RPG mit Grafik im Pixel-Art Stil
+- [NewPipe](https://f-droid.org/de/packages/org.schabi.newpipe/) - Videos von [YouTube](https://www.youtube.com/) schauen
+- [ScreenCam](https://f-droid.org/de/packages/com.orpheusdroid.screenrecorder/) - Video vom Bildschirm aufzeichnen
+- [Markor](https://f-droid.org/de/packages/net.gsantner.markor/) - Editor für Notizen und Aufgaben im  [todo.txt](http://todotxt.org/)-Format
+- [Syncthing](https://f-droid.org/de/packages/com.nutomic.syncthingandroid/) - Dateien mit anderen Geräten synchronisieren über ein P2P-Netzwerk (ohne Cloud!)
+- [KeePass DX](https://f-droid.org/de/packages/com.kunzisoft.keepass.libre/) - Passwortmanager (kompatibel mit [KeePass](https://keepass.info/) und [KeePassXC](https://keepassxc.org/))
+
 ## [Chromium](https://www.chromium.org/Home) (Webbrowser)
 
 Performanter, stabiler und sicherer Open Source-Browser. Basis von Chrome, aber [ohne das Tracking](https://de.wikipedia.org/wiki/Chromium_(Browser)#Unterschiede_zu_Google_Chrome).
