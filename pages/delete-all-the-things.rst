@@ -30,8 +30,8 @@ Alte Pakete und Konfigurationen löschen::
 	...
 	deleting '/nix/store/trash'
 	deleting unused links...
-	note: currently hard linking saves 194.23 MiB
-	60548 store paths deleted, 72496.71 MiB freed
+	note: currently hard linking saves 623.78 MiB
+	53984 store paths deleted, 100891.25 MiB freed
 
 Nix-Store optimieren, in dem identische Dateien durch Hardlinks ersetzt werden::
 
