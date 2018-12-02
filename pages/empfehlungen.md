@@ -63,6 +63,7 @@ Meine Konfigurationen findest du auf [Github](https://github.com/davidak/nixos-c
 - [Shattered Pixel Dungeon](https://f-droid.org/de/packages/com.shatteredpixel.shatteredpixeldungeon/) Klassisches [Roguelike](https://de.wikipedia.org/wiki/Rogue-like) RPG mit Grafik im Pixel-Art Stil
 - [NewPipe](https://f-droid.org/de/packages/org.schabi.newpipe/) - Videos von [YouTube](https://www.youtube.com/) schauen
 - [ScreenCam](https://f-droid.org/de/packages/com.orpheusdroid.screenrecorder/) - Video vom Bildschirm aufzeichnen
+- [Audio Recorder](https://f-droid.org/en/packages/com.github.axet.audiorecorder/) - Audio aufzeichnen in verschiedenen Formaten
 - [Markor](https://f-droid.org/de/packages/net.gsantner.markor/) - Editor für Notizen und Aufgaben im  [todo.txt](http://todotxt.org/)-Format
 - [Syncthing](https://f-droid.org/de/packages/com.nutomic.syncthingandroid/) - Dateien mit anderen Geräten synchronisieren über ein P2P-Netzwerk (ohne Cloud!)
 - [KeePass DX](https://f-droid.org/de/packages/com.kunzisoft.keepass.libre/) - Passwortmanager (kompatibel mit [KeePass](https://keepass.info/) und [KeePassXC](https://keepassxc.org/))
@@ -84,6 +85,11 @@ Performanter, stabiler und sicherer Open Source-Browser. Basis von Chrome, aber 
 - [Tab Counter](https://chrome.google.com/webstore/detail/tab-counter/feeoiklfggbaibpdhkkngbpkppdmcjal) - Anzahl der offenen Tabs und Fenster anzeigen
 - [ModHeader](https://chrome.google.com/webstore/detail/modheader/idgpnmonknjnojddfkpgkljpfnnfcklj) - Benutzerdefinierte Header setzen
 - [IPFS Station](https://chrome.google.com/webstore/detail/ipfs-station/kckhgoigikkadogfdiojcblegfhdnjei) - [IPFS](https://ipfs.io/)-Ressourcen über lokale Node laden
+
+## Spiele
+
+- [MultiMC](https://multimc.org/) Minecraft-Client Instanzen verwalten
+- [Mumble](https://mumble.info/) Voice-Chat mit geringer Latenz
 
 # Hardware
 
