@@ -154,8 +154,8 @@ TIMEZONE = "Europe/Berlin"
 
 # Date format used to display post dates. (translatable)
 # (str used by datetime.datetime.strftime)
-# DATE_FORMAT = '%Y-%m-%d %H:%M'
-DATE_FORMAT = '%e. %B %Y'
+# DATE_FORMAT = YYYY-MM-dd HH:mm'
+DATE_FORMAT = 'd.M.YYYY'
 
 # Date format used to display post dates, if local dates are used. (translatable)
 # (str used by moment.js)
@@ -464,7 +464,9 @@ USE_BASE_TAG = False
 
 # Final location for the blog main RSS feed is:
 # output / TRANSLATION[lang] / RSS_PATH / rss.xml
-RSS_PATH = ""
+#RSS_PATH = ""
+
+ATOM_PATH = "."
 
 # Slug the Tag URL. Easier for users to type, special characters are
 # often removed or replaced as well.
@@ -570,18 +572,18 @@ GITHUB_COMMIT_SOURCE = True
 # use this feature if you do not understand what this means.
 
 # Compiler to process LESS files.
-# LESS_COMPILER = 'lessc'
+LESS_COMPILER = 'lessc'
 
 # A list of options to pass to the LESS compiler.
 # Final command is: LESS_COMPILER LESS_OPTIONS file.less
-# LESS_OPTIONS = []
+LESS_OPTIONS = []
 
 # Compiler to process Sass files.
-# SASS_COMPILER = 'sass'
+SASS_COMPILER = 'sass'
 
 # A list of options to pass to the Sass compiler.
 # Final command is: SASS_COMPILER SASS_OPTIONS file.s(a|c)ss
-# SASS_OPTIONS = []
+SASS_OPTIONS = []
 
 # #############################################################################
 # Image Gallery Options
@@ -1051,7 +1053,7 @@ BODY_END = ""
 
 # If you hate "Filenames with Capital Letters and Spaces.md", you should
 # set this to true.
-UNSLUGIFY_TITLES = True
+FILE_METADATA_UNSLUGIFY_TITLES = True
 
 # Additional metadata that is added to a post when creating a new_post
 # ADDITIONAL_METADATA = {}

@@ -4,7 +4,6 @@ Module = german_slugify
 
 [Nikola]
 PluginCategory = SignalHandler
-MinVersion = 7.7.7
 
 [Documentation]
 Author = Felix Fontein
