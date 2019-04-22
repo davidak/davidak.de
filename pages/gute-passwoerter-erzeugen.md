@@ -33,104 +33,98 @@ Installation mit [pip](https://pip.pypa.io/en/stable/):
 
 Es bringt eine Liste von derzeit 65.354 englischen Wörtern mit. Wir möchten natürlich eine Liste mit deutschen Wörtern.
 
-# Wortliste erstellen
+# Wortliste besorgen
 
-Es gibt im Internet diverse Wortlisten, wobei die Angabe der Häufigkeit für uns besonders hilfreich ist:
+Im Internet gibt es diverse Wortlisten. Ich habe ein Script geschrieben, dass einige runterläd, sie bereinigt und zusammenführt, so dass wir eine Textdatei mit über 200.000 Wörtern erhalten.
 
-- <http://wortschatz.uni-leipzig.de/html/wliste.html>
-- <http://corpora2.informatik.uni-leipzig.de/download.html>
-- <http://www1.ids-mannheim.de/kl/projekte/methoden/derewo.html>
-- <http://clarin.bbaw.de:8088/fedora/objects/dwds:2/datastreams>
-- <https://github.com/hermitdave/FrequencyWords>
-- <https://de.wikipedia.org/wiki/Liste_der_h%C3%A4ufigsten_W%C3%B6rter_der_deutschen_Sprache>
-- <https://de.wiktionary.org/wiki/Wiktionary:Fehlende_Eintr%C3%A4ge/WP_Top1000>
-- <https://dumps.wikimedia.org/backup-index.html>
-- <http://world.std.com/~reinhold/diceware_german.txt>
-- <https://sourceforge.net/projects/germandict/>
-- <http://www.netzmafia.de/software/wordlists/deutsch.txt>
-- <http://cornelia.siteware.ch/wortschatz/themwortlist.html#sammlung>
-- <http://dict.tu-chemnitz.de/de-en/lists/index.html>
+Das Script und die fertige Wortliste findest du auf GitHub: https://github.com/davidak/wortliste
 
-Diese Listen enthalten meist nicht nur Wörter, sondern auch Metadaten wie Häufigkeit oder grammatikalische Eigenschaften. Daher müssen wir sie bereinigen. Das geht einfach auf der Kommandozeile mit standard Werkzeugen wie  `awk`, `sed`, `sort` und `uniq`.
+Download der Wortliste mit:
 
-Als Beispiel nehme ich die Datei [deu_news_2015_3M.tar.gz](http://corpora2.informatik.uni-leipzig.de/downloads/deu_news_2015_3M.tar.gz) vom [Wortschatz-Projekt der Universität Leipzig](http://wortschatz.uni-leipzig.de/), die einen Textkorpus von 3 Millionen Sätzen aus deutschen Zeitungen enthält.
-
-Ich entpacke das Archiv und erhalte mehrere Dateien:
-
-    tar xzf deu_news_2015_3M.tar.gz
-    cd deu_news_2015_3M
-
-Uns interessiert hier nur die Datei **deu_news_2015_3M-words.txt**, die einzelne Wörter nach ihre Häufigkeit in den Texten sortiert enthält.
-
-Nur die Wörter extrahieren:
-
-    awk -F$'\t' '{print $2}' deu_news_2015_3M-words.txt > 1
-
-Alle Wörter löschen, die Zeichen enthalten, die nicht diesen Zeichengruppen angehören: a-z, A-Z, äöüÄÖÜß, also Zahlen und Sonderzeichen inkl. Leerzeichen:
-
-    sed -i -E '/[^a-zA-ZäöüÄÖÜß]/d' 1
-
-Abkürzungen entfernen:
-
-    sed -i -E '/[A-ZÄÖÜ]{2,}/d' 1
-
-Alle Zeilen mit nur einem Zeichen entfernen:
-
-    sed -i '/^.$/d' 1
-
-Alle leeren Zeilen entfernen:
-
-    sed -i '/^\s*$/d' 1
-
-Aus der Datei nehmen wir jetzt nur die ersten 200.000 Zeilen:
-
-    head -n200000 1 > deu_news_2015_3M_wortliste.txt
-
-Das ganze kann natürlich auch in einen Einzeiler gepackt werden:
-
-    cat deu_news_2015_3M-words.txt | awk -F$'\t' '{print $2}' | sed -E "/[^a-zA-ZäöüÄÖÜß]/d" | sed -E '/[A-ZÄÖÜ]{2,}/d' | sed '/^.$/d' | sed '/^\s*$/d' | head -n200000 > deu_news_2015_3M_wortliste.txt
-
-Um Wörter auszusortieren, die nur in Zeitungen besonders häufig vorkommen, filtern wir die Liste nochmal durch das Wiktionary.
-
-Dazu laden wir den [aktuellen Datenbank-Dump](https://dumps.wikimedia.org/backup-index.html) der **dewiktionary** mit dem Namen **dewiktionary-20160801-pages-articles.xml.bz2** herunter und extrahieren die einzelnen Wörter:
-
-    bzcat dewiktionary-20160801-pages-articles.xml.bz2 | grep '<title>[^[:space:][:punct:]]*</title>' | sed 's:.*<title>\(.*\)</title>.*:\1:' > dewiktionary_words.txt
-
-Quelle: <http://stackoverflow.com/a/9856465/2611995>
-
-Nun führen wir die beiden Listen in eine Datei zusammen, sortieren die Zeilen alphabetisch, zählen doppelte Zeilen und sortieren nochmal nach Häufigkeit der Wörter. Hier können auch weitere Wortlisten zusammengefügt werden. Nun nehmen wir uns nur die Wörter, die 2 oder mehr mals vorkommen. Dadurch haben wir nur Wörter, die auch im Wörterbuch ([Wiktionary](https://de.wiktionary.org/)) vorkommen. (im Fall der 2 Listen)
-
-    cat deu_news_2015_3M_wortliste.txt dewiktionary_words.txt | sort | uniq -c | sort -nr | awk '$1 >= 2' | awk '{print $2}' | sort > wortliste.txt
-
-So erhalten wir eine Liste mit 82.505 Wörtern.
+    curl -O https://raw.githubusercontent.com/davidak/wortliste/master/wortliste.txt
 
 # Passphrase generieren
 
-    xkcdpass --wordfile wortliste.txt --min 2 --max 8 --delimiter - --numwords 5 --verbose
-    Your word list contains 31406 words, or 2^14.94 words.
-    A 5 word password from this list will have roughly 74 (14.94 * 5) bits of entropy,
+    xkcdpass --wordfile wortliste.txt --min 2 --max 8 --valid-chars '[a-zA-ZäÄöÖüÜ]' --delimiter - --numwords 5 --verbose
+    Your word list contains 52149 words, or 2^15.67 words.
+    A 5 word password from this list will have roughly 78 (15.67 * 5) bits of entropy,
     assuming truly random word selection.
-    feurige-Amtsarzt-arger-Menü-abstruse
+    Ölmantel-dualen-Luiz-Helwig-Tagger
 
-Die generierte Passphrase besteht aus 5 zufälligen Wörtern aus unserer Liste mit mindestens 2 Zeichen und maximal 8, wodurch sich die Anzahl der tatsächlich genutzten Wörter nochmal verkleinert. Durch den Parameter `--verbose` wird auch die Entropie angezeigt, in diesem Fall 74 bit. Diese Entropie hat die Passphrase aber nur, wenn du die 1. nimmst und nicht etwa solange neue generierst, bis dir eine gefällt.
+Die generierte Passphrase besteht aus 5 zufälligen Wörtern aus unserer Liste mit mindestens 2 Zeichen und maximal 8 und bestehend aus den Buchstaben a-z, A-Z, ä, Ä, ö, Ö, ü, und Ü, wodurch sich die Anzahl der tatsächlich genutzten Wörter nochmal verkleinert. Durch den Parameter `--verbose` wird auch die Entropie angezeigt, in diesem Fall 78 bit. Diese Entropie hat die Passphrase aber nur, wenn du die 1. nimmst und nicht etwa solange neue generierst, bis dir eine gefällt.
 
 # Entropie berechnen
 
-Wie viel Entropie eine Passphrase braucht hängt vom Angriffsszenario ab, gegen das man sich schützen will.
+Die Entropy einer Passphrase lässt sich mit folgender Formel berechnen:
 
-Im Film Citizenfour (2014) sagt Edward Snowden: "Assume your adversary is capable of one trillion guesses per second."
+**entropy = log2(S<sup>L</sup>)**
+
+Wobei **S** die Anzahl der Wörter in der Wortliste und **L** die Anzahl der Wörter aus der die Passphrase besteht.
+
+Quelle: <https://ritcyberselfdefense.wordpress.com/2011/09/24/how-to-calculate-password-entropy/>
+
+Die Berechnung lässt sich einfach mit Python durchführen:
+
+    $ python3
+    >>> from math import pow, log2
+    >>> log2(pow(7776,5))
+    64.62406251802891
+
+Für die Passphrase werden hier 5 zufällige Wörter aus einer Wortliste mit 7.776 Wörtern (englische [Diceware](http://world.std.com/~reinhold/diceware.html) Liste) benutzt.
+
+Wir kommen auf eine Entropie von 64 bit.
+
+Eine Passphrase ist sicher, auch wenn die Wortliste bekannt ist!
+
+# Angriffsszenario
+
+Wie viel Entropie eine Passphrase braucht, um sicher zu sein, hängt vom Angriffsszenario ab.
+
+## Webmail Login
+
+## Windows Benutzer Login
+
+## Ubuntu 16.04 (Linux) Benutzer Login
+
+## Ubuntu 16.04 (Linux) /etc/shadows
+
+Szenario: Der Angreifer hat die /etc/shadows Datei, in der die gehashten Benutzer-Passwörter eines Linux-Systems stehen. Die Datei kann z.B. ausgelesen werden, wenn der Angreifer physikalischen Zugriff auf das System hat und die Festplatte ausbaut oder das System mit einer Live-CD bootet. Wenn das Benutzerverzeichnis nicht verschlüsselt ist hat er in dem Fall auch Zugriff auf alle Dateien des Benutzers und braucht dessen Passwort garnicht knacken.
+
+## SSH Login
+
+## SSH Login (mit Fail2Ban)
+
+Ubuntu Paket
+
+## KeePass Passwortmanager
+
+Bei KeePass (Windows) oder KeePassX (Plattformunabhängig)
+
+cost hochsetzen!!!
+
+
+## PGP Private Key
+
+Szenario: Der Angreifer hat deinen PGP Private Key, der allerdings durch eine Passphrase geschützt ist. Er versucht diese mit einem [Brute-Force-Angriff](https://de.wikipedia.org/wiki/Brute-Force-Methode) zu knacken.
+
+Im Film Citizenfour (2014) sagt [Edward Snowden](https://de.wikipedia.org/wiki/Edward_Snowden):
+
+>Assume your adversary is capable of one trillion guesses per second.
 
 Quelle: [Transcript](http://cryptome.org/2015/02/edwards-010-014.pdf)
 
 Was bedeutet, dass die NSA 2014 in der Lage war eine Billion (10<sup>12</sup> oder 1.000.000.000.000) PGP-Passphrases in der Sekunde auszuprobieren.
 
-Zur Sicherheit gehen wir mal von der hundertfachen Leistung aus. Laut [dieser Visualisierung](https://www.reddit.com/r/dataisbeautiful/comments/322lbk/time_required_to_bruteforce_crack_a_password/) dauert es mindestens 191,5 Jahre, maximal 383 Jahre eine Passphrase mit 80 bit zu knacken. Da ich so lange nicht lebe, sollte es sicher genug sein.
+Zur Sicherheit gehen wir mittlerweile mal von der hundertfachen Leistung aus. Laut [dieser Visualisierung](https://www.reddit.com/r/dataisbeautiful/comments/322lbk/time_required_to_bruteforce_crack_a_password/) dauert es mindestens 191,5 Jahre, maximal 383 Jahre eine Passphrase mit **80 bit** zu knacken. Da ich so lange nicht lebe, sollte es sicher genug sein.
 
 
 
-Für einen solchen [Brute-Force-Angriff](https://de.wikipedia.org/wiki/Brute-Force-Methode) muss der Angreifer Zugriff auf die gehashte Passphrase haben. Er muss also Zugriff auf den Computer haben.
 
-Wenn der Computer aus ist und deine Benutzerdaten verschlüsselt sind, muss er die Passphrase cracken, um die Daten zu entschlüsseln. Wenn er sich durch eine Sicherheitslücke Zugriff verschafft, während du eingeloggt bist, die Daten also bereits entschlüsselt sind, hat er auf alles Zugriff. Genau so, wenn du keine Verschlüsselung nutzt.
+Für einen solchen [Brute-Force-Angriff](https://de.wikipedia.org/wiki/Brute-Force-Methode) muss der Angreifer Zugriff auf die gehashte Passphrase haben. Er muss also Zugriff auf den Computer gehabt haben oder anderweitig an die Datei gekommen sein (gespeichert in der Cloud, per E-Mail verschickt, USB-Stick verloren, ...).
+
+
+
+Wenn der Computer aus ist und deine Benutzerdaten verschlüsselt sind, muss er die Passphrase cracken, um die Daten zu entschlüsseln. Wenn er sich durch eine Sicherheitslücke Zugriff verschafft, während du eingeloggt bist, die Daten also bereits entschlüsselt sind, hat er auf alles Zugriff. Genau so, wie wenn du keine Verschlüsselung nutzt.
 
 Entweder er dringt in deine Wohnung ein und baut die Festplatte aus dem Computer aus oder er verschafft sich durch eine Sicherheitslücke Zugriff auf dem Computer.
 
@@ -147,38 +141,19 @@ For logging in to websites and other servers, use a password database.
 
 Ein sehr sicheres Passwort hat laut [dieser Visualisierung](https://www.reddit.com/r/dataisbeautiful/comments/322lbk/time_required_to_bruteforce_crack_a_password/) 82 bit Entropie.
 
-Die Entropy eines Passworts lässt sich mit folgender Formel berechnen:
-
-**entropy = log2(S<sup>L</sup>)**
-
-Wobei **S** die Anzahl der Wörter in der Wortliste und **L** die Anzahl der Wörter aus der die Passphrase besteht.
-
-Quelle: <https://ritcyberselfdefense.wordpress.com/2011/09/24/how-to-calculate-password-entropy/>
-
-Die Berechnung lässt sich einfach mit Python durchführen:
-
-    $ python3
-    >>> from math import pow, log2
-    >>> log2(pow(7776,5))
-    64.62406251802891
-
-Für das Passwort werden hier 5 zufällige Wörter aus einer Wortliste mit 7.776 Wörtern (englische [Diceware](http://world.std.com/~reinhold/diceware.html) Liste) benutzt.
-
-Wir kommen auf eine Entropie von 64 bit.
-
-Das Programm **xkcdpass** berechnet die Entropie, wenn der Parameter `-V` bzw. `--verbose` angehängt wird.
-
-Eine Passphrase ist sicher, auch wenn die Wortliste bekannt ist! Um noch etwas sicherer zu sein werde ich meine Wortliste trotzdem nicht veröffentlichen. Ich erkläre aber, wie man sich selbst eine zusammenstellen kann.
-
-
-
-
-
-
 
 # Passwortmanager benutzen
 
+Ein paar Passphrases musst du im Kopf haben, alle weiteren kannst du in einem Passwortmanager speichern.
 
+Merken solltest du dir:
+
+- Computer Benutzerkonto
+- Passwortmanager
+
+Du solltest unbedingt ein Backup der Passwortmanager-Datenbank haben! So erlangst du wieder Zugriff auf alles, auch wenn dein Computer kaputt geht. Wenn das Backup-Medium verschlüsselt ist oder du die Datei in der Cloud speicherst, solltest du dir auch diese Passphrase merken.
+
+Die Passphrases für alles andere (Webseiten Login, Online-Banking, Computerspiele Login, ...) kannst du direkt im Passwortmanager erzeugen. Hier kannst du problemlos auf über 100 bit Entropie gehen, in dem du eine Passphrase aus Kleinbuchstaben und Zahlen mit 20 Zeichen generierst. Die kannst du im Zweifel abtippen, ist aber sehr sicher.
 
 
 
