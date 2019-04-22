@@ -53,6 +53,7 @@ Meine Konfigurationen findest du auf [Github](https://github.com/davidak/nixos-c
 - [AndStatus](https://f-droid.org/de/packages/org.andstatus.app/) - Client für [Mastodon](https://joinmastodon.org/), [Twitter](https://twitter.com/) und andere soziale Netzwerke
 - [Conversations](https://f-droid.org/de/packages/eu.siacs.conversations/) - Jabber/XMPP Messanger mit [OMEMO](https://conversations.im/omemo/) (Ende-zu-Ende-Verschlüsselung)
 - [Wire](https://play.google.com/store/apps/details?id=com.wire&hl=en) - Sicherer und benutzerfreundlicher Messanger ([noch nicht in F-Droid](https://github.com/wireapp/wire-android/issues/233))
+- [Plumble](https://f-droid.org/packages/com.morlunk.mumbleclient/) - Mumble Client
 - [StreetComplete](https://f-droid.org/de/packages/de.westnordost.streetcomplete/) - Zu [OpenStreetMap](https://www.openstreetmap.org/) beitragen durch Lösen von einfachen Aufgaben, z.B. Hausnummer herausfinden
 - [Vespucci](https://f-droid.org/de/packages/de.blau.android/) - Erweiterter [OpenStreetMap](https://www.openstreetmap.org/)-Editor
 - [OsmAnd](https://f-droid.org/de/packages/net.osmand.plus/) - Navigation mit der [OpenStreetMap](https://www.openstreetmap.org/) (auch offline!)

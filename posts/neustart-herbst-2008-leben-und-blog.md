@@ -3,7 +3,7 @@
 .. slug: 513-neustart-herbst-2008-leben-und-blog
 .. date: 2008-10-13 09:00:11
 .. tags: In eigener Sache,Persönlich
-.. description: 
+.. description:
 .. type: text
 -->
 
@@ -25,7 +25,7 @@ Und deswegen gabs hier lange Zeit nichts.
 So war ich bis letztes Wochenende komplett weg, dann ne Woche Lehrgang und am Freitag und Samstag direkt wieder weg.
 Aber heute hatte ich mal wieder Zeit, das Theme zu vervollständigen, an dem ich seit Monaten arbeite.
 
-Das original Theme stammt vom [Amy&Pink;](http://www.amypink.com/)-Blog.
+Das original Theme stammt vom [Amy&Pink](https://www.amypink.com/)-Blog.
 
 Gegen Abend dann dem Blog ein Upgrade auf 2.6.2 gegönnt und das Theme aufgespielt, das zuvor ausgiebig auf dem Testblog getestet wurde.
 Nach kleinen Anpassungen der Zusammenarbeit mit Plugins geht nun endlich alles.
