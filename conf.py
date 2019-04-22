@@ -64,8 +64,9 @@ NAVIGATION_LINKS = {
 }
 
 # Name of the theme to use.
-THEME = "bootstrap3-jinja"
-#THEME = "bootblog-jinja"
+#THEME = "bootstrap3-jinja"
+THEME = "bootstrap4-jinja"
+#THEME = "bootblog4"
 #THEME = "lanyon"
 
 #GLOBAL_CONTEXT = {

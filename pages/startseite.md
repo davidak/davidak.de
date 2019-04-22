@@ -30,9 +30,9 @@ Als **Künstler** erstelle ich Fotos und [Videos](/video/). Die Werke sind oft e
 
 ## Lebensstil
 
-<blockquote>
+<blockquote class="blockquote">
   <p>Sei selbst die Veränderung, die du dir wünschst für diese Welt.</p>
-  <footer>Mahatma Gandhi</footer>
+  <footer class="blockquote-footer">Mahatma Gandhi</footer>
 </blockquote>
 
 Ich möchte auch im Alltag etwas verändern, indem ich jeden Tag **bewusst lebe, kritisch hinterfrage, informierte Entscheidungen treffe und danach handele**. Beispiele dafür sind in meinen [Empfehlungen](/empfehlungen/) zu finden.
