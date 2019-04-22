@@ -1,9 +1,12 @@
-.. title: Gute Passwörter erzeugen
+<!--
+.. title: Gute Passwörter erzeugen [WIP]
 .. slug: gute-passwoerter-erzeugen
 .. date: 2016-07-31 14:41:35 UTC+02:00
-.. tags: Passwort, Sicherheit
-.. description: Der Artikel beschreibt, wie eine sichere Passphrase mit dem Programm xkcdpass nach der bekannten Methode aus dem xkcd Comic generiert werden kann.
+.. tags: Passwort, Passphrase, Sicherheit
+.. description: Der Artikel beschreibt, wie eine sichere Passphrase mit dem Programm xkcdpass nach der bekannten Methode aus dem xkcd-Comic generiert werden kann.
 .. type: text
+.. status: draft
+-->
 
 # Was zeichnet ein gutes Passwort aus?
 
