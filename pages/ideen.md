@@ -5,7 +5,7 @@
 .. description:
 .. type: text
 
-Ich hab viele (gute) Ideen, aber zu wenig Zeit alle zeitnah umzusetzen. Vielleicht inspiriert dich etwas davon!
+Ich hab viele (gute) Ideen, aber zu wenig Zeit alle umzusetzen. Vielleicht inspiriert dich etwas davon!
 
 ## GTA like Game using Real World Maps from OpenStreetMap
 
@@ -15,6 +15,8 @@ Ich hab viele (gute) Ideen, aber zu wenig Zeit alle zeitnah umzusetzen. Vielleic
 - i would use an open source game engine and publish the game as open source software, so the community can help enhance it
 - the [OSM map of the whole planet](https://planet.openstreetmap.org/) is currently (2018-02-04) 63 GB big, so you might want to use only [your city or country](https://download.geofabrik.de/)
 - such game can also be used for learning to drive some way you want to travel or just drive around your city
+- You can use [Structure from motion](https://en.wikipedia.org/wiki/Structure_from_motion) (SfM) to create point clouds and textured 3D models from photos
+- [GeoStrike](https://github.com/Webiks/GeoStrike) is a very similar effort using [CesiumJS](https://cesiumjs.org/demos/geostrike/)
 
 ## Warteschleifen DJ
 
