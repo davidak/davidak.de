@@ -10,9 +10,9 @@
 Was ist das eigendlich?
 <!-- TEASER_END -->
 
-Blogging ist ja ein "digitales Tagebuch", in dem man über (private) Themen schreibt, die einen gerade beschäftigen.
+Blogging ist ja ein "digitales Tagebuch", in dem man über (persönliche) Themen schreibt, die einen gerade beschäftigen.
 Wie du es ja hier gerade vor dir siehst.
-Ich schreib sehr oft über Technische Sachen und übers Internet, aber auch mal über private Sachen.
+Ich schreib sehr oft über technische Sachen und übers Internet, aber auch mal über persönliche Sachen.
 
 **Aber was ist jetzt Microblogging?**
 

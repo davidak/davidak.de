@@ -3,7 +3,7 @@
 .. date: 2016-02-28 23:24:45 UTC+01:00
 .. updated: 2017-11-19 20:40:00 UTC+01:00
 .. tags:
-.. description: Die private Webseite von davidak.
+.. description: Die persönliche Webseite von davidak.
 .. type: text
 .. hidetitle: True
 .. pretty_url: False

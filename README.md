@@ -1,6 +1,6 @@
 # davidak.de
 
-Dies ist der Quelltext meiner privaten Webseite.
+Dies ist der Quelltext meiner persönlichen Webseite.
 
 Es wird eine statische Seite mit [Nikola](https://getnikola.com/) generiert.
 

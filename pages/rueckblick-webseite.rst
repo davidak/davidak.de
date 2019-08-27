@@ -5,7 +5,7 @@
 .. description: Versionen der Webseite
 .. type: text
 
-Seit 2005 hab ich eine private Webseite im Internet. Auf dieser Seite siehst du wie sich das Design mit der Zeit weiterentwickelt hat.
+Seit 2005 hab ich eine persönliche Webseite im Internet. Auf dieser Seite siehst du wie sich das Design mit der Zeit weiterentwickelt hat.
 
 Version 0
 ---------

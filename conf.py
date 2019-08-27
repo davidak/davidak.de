@@ -12,7 +12,7 @@ SITE_URL = "https://davidak.de/"
 # If not set, defaults to SITE_URL
 #BASE_URL = "https://davidak.de/"
 BLOG_EMAIL = "post@davidak.de"
-BLOG_DESCRIPTION = "Die private Webseite von davidak."  # (translatable)
+BLOG_DESCRIPTION = "Die persönliche Webseite von davidak."  # (translatable)
 
 DEFAULT_LANG = "de"
 
