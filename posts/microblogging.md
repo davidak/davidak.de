@@ -22,7 +22,7 @@ Mann beantwortet die Frage:"_Was machst du gerade?_" und dies in einem Satz.
 
 Dafür gibt es einige Web 2.0 Dienste.
 
-Das erste, das den Hype bestartet hat war Twitter.
+Das erste, das den Hype bestartet hat, war Twitter.
 Immer noch eines der besten Dienste.
 
 Es gibt aber auch deutsche Twitter-Klone.
@@ -47,4 +47,4 @@ Den Account verdank ich Matthias Pfefferle, der 5 [Invites bekommen](http://noti
 Er sollte noch welche haben, also mal dort vorbeischauen.
 
 Ich poste nur zu Twitter, jaiku und frazr.
-Ich hab auch im Blog ein Widget von Twitter (unten links un der Siebar), wo man meine 5 letzten Posts sehen kann.
+Ich hab auch im Blog ein Widget von Twitter (unten links in der Siebar), wo man meine 5 letzten Posts sehen kann.
