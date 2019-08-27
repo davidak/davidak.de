@@ -47,3 +47,9 @@ Mit diesen beiden Befehlen wird die Webseite gebaut und auf den Server deployt.
 
     ipfs add -r output/
     ipfs name publish SITE_HASH
+
+## Lizenz
+
+Inhalte wie Texte und Bilder sind unter CC-BY-SA-4.0 lizensiert und Code unter GPL-3.0-or-later, wenn nicht anders angegeben.
+
+Alle Dateien mit der Endung `.nix` sind unter MIT lizensiert.
